@@ -1,0 +1,8 @@
+<h2 id="demo"></h2>
+
+<script>
+    var txt = '{"name":"Alder", "age":"24", "city":"Costa Leona"}';
+    var obj = JSON.parse(txt);
+    
+    document.getElementById("demo").innerHTML = obj.name + ", " + obj.city;
+</script>

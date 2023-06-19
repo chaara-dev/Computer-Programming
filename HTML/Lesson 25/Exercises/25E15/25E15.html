@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>25E15</title>
+        <style>
+            body {
+                background-color: orange;
+                counter-reset: mega-step;
+                counter-reset: mini-step;
+            }
+            section {
+                width: 20%;
+                float: left;
+                margin: 20px;
+                background-color: white;
+                counter-increment: mega-step;
+                padding: 5px;
+            }
+            section:before {
+                content: counter(mega-step, upper-roman);
+                display: block;
+                padding: 10px;
+                background-color: orange;
+                width: 10%;
+                color: white;
+                text-align: center;
+            }
+            ol {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <ol>
+                <li>Go to store</li>
+                <li>Go to meat counter</li>
+                <li>Ask butcher for skirt meat</li>
+            <ol>
+        </section>
+
+
+        <section>
+            <ol>
+                <li>Drive home</li>
+                <li>Park safely</li>
+                <li>Start grill</li>
+            <ol>
+        </section>
+
+
+        <section>
+            <ol>
+                <li>Marinate steak</li>
+                <li>Put on grill</li>
+                <li>Wait 8 minutes then flip</li>
+            <ol>
+        </section>
+
+
+        <section>
+            <ol>
+                <li>Bring steak inside</li>
+                <li>Wait 10 minutes</li>
+                <li>Eat</li>
+            <ol>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>26E17</title>
+        <style>
+
+        </style>
+        <script>
+            function javaFunction() {
+                document.getElementById("image").setAttribute("src", "java.png")
+                document.getElementById("image").setAttribute("alt", "Java")
+                document.getElementById("image").setAttribute("height", "100px")
+                document.getElementById("text").innerHTML = "Java is a general-purpose programming language that is class-based and object-oriented. It is designed have as few implementation dependancies as possible."
+            }
+            function pythonFunction() {
+                document.getElementById("image").setAttribute("src", "python.png")
+                document.getElementById("image").setAttribute("alt", "Python")
+                document.getElementById("image").setAttribute("height", "100px")
+                document.getElementById("text").innerHTML = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with it's notable use of significant whitespace."
+            }
+            function cppFunction() {
+                document.getElementById("image").setAttribute("src", "cpp.png")
+                document.getElementById("image").setAttribute("alt", "C++")
+                document.getElementById("image").setAttribute("height", "100px")
+                document.getElementById("text").innerHTML = 'C++ is a general-purpose programming language created by Bjarne Strousup as an extension of the C programming languages, or "C with Classes".'
+            }
+            function htmlFunction() {
+                document.getElementById("image").setAttribute("src", "html.png")
+                document.getElementById("image").setAttribute("alt", "HTML")
+                document.getElementById("image").setAttribute("height", "100px")
+                document.getElementById("text").innerHTML = "HyperText markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as Javascript and VBScript."
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Popular Programming Languages</h1>
+        <img src="keyboard.jpg" alt="Keyboard" width="100px" height="50px" id="image">
+        <br /><br />
+        <button onclick="javaFunction()">Java</button>
+        <button onclick="pythonFunction()">Python</button>
+        <button onclick="cppFunction()">C++</button>
+        <button onclick="htmlFunction()">HTML</button>
+        <br /><br />
+        <br /><br />
+        <p id="text">Different Languages have different uses.</p>
+    </body>
+</html>

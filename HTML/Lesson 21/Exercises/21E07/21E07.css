@@ -1,0 +1,12 @@
+.purple {
+    background-color: purple;
+    width: 300px;
+}
+.pink {
+    background-color: pink;
+    width: 100%;
+    max-width: 150px;
+}
+body {
+    background-color: blue;
+}

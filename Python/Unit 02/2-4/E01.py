@@ -1,0 +1,1 @@
+print(input("Type your name here: "))

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>infinitescroll</title>
+        <style>
+            #repeatpage {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, 0);
+            }
+            iframe {
+                border: 0;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="repeatpage" style="height:125%">
+        Scrolling forever...
+        </div>
+            <script>
+            var page=1
+            window.onscroll = function(ev) {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                       ifrm = document.createElement("IFRAME"); 
+                    ifrm.setAttribute("src", "repeatpage.html"); 
+                    ifrm.style.width = 100+"%"; 
+                    ifrm.style.height = 800+"px"; 
+                    document.body.appendChild(ifrm); 
+                    page++
+                    document.getElementById('repeatpage').style.visibility = 'hidden';
+                }
+            };
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+print("bookkeeper"[0:4])
+print("bookkeeper"[-10:-6])
+print("bookkeeper"[7:10])
+print("bookkeeper"[-3] + "bookkeeper"[-2] + "bookkeeper"[-1])
+print("bookkeeper"[-6:-7])
+print("bookkeeper"[4:8])

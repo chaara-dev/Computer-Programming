@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>10E07b</title>
+        <style>
+            body {
+                background-image: url(stars.jfif);
+            }
+            #title {
+                text-align: center;
+                font-size: 40pt;
+                color: skyblue;
+            }
+            #intro {
+                text-align: center;
+                color: white;
+                font-size: 12pt;
+            }
+            .exp1:hover {
+                background-color: blueviolet;
+            }
+            .exp2:hover {
+                background-color: limegreen;
+            }
+            .exp3:hover {
+                background-color: orangered;
+            }
+            #images {
+                position: absolute;
+                left: 250px;
+            }
+            #buttons {
+                position: absolute;
+                text-align: center;
+                color: white;
+                left: 300px;
+                bottom: 10px;
+            }
+            #volcano, #sodium, #nuke {
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="title">
+            Great Chemistry Ideas
+        </div>
+        <div id="intro">
+            <p>
+                Chemistry can be fun! Here are some experiments you can do at home.
+            </p>
+            <p>
+                <ul>
+                    <li class="exp1">
+                        Try mixing baking soda with vinegar! The results will suprise you!
+                    </li>
+                    <li class="exp2">
+                        Also try throwing a chunk of sodium into a lake! The results might blow your mind!
+                    </li>
+                    <li class="exp3">
+                        Another classic, try splitting a uranium atom in two! The results are killer!
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div id="images">
+            <img src="volcano.jfif" id="volcano">
+            <img src="sodium.jfif" id="sodium">
+            <img src="nuke.jfif" id="nuke">
+        </div>
+        <div id="buttons">
+            <p>
+                Try clicking the following buttons to see the results! Remember that it is always better to try it for  yourself first!
+            </p>
+            <p>
+                <span class="exp1" onclick="document.getElementById('volcano').style.visibility = 'visible';">
+                    See results for Experiment 1
+                </span>
+                <br />
+                <span class="exp1" onclick="document.getElementById('volcano').style.visibility = 'hidden';">
+                    Hide results for Experiment 1
+                </span>
+                <br />
+                <span class="exp2" onclick="document.getElementById('sodium').style.visibility = 'visible';">
+                    See results for Experiment 2
+                </span>
+                <br />
+                <span class="exp2" onclick="document.getElementById('sodium').style.visibility = 'hidden';">
+                    Hide results for Experiment 2
+                </span>
+                <br />
+                <span class="exp3" onclick="document.getElementById('nuke').style.visibility = 'visible';">
+                    See results for Experiment 3
+                </span>
+                <br />
+                <span class="exp3" onclick="document.getElementById('nuke').style.visibility = 'hidden';">
+                    Hide results for Experiment 3
+                </span>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+print(type(7))
+print(type("7"))
+print(type("Sally"))
+print(type(0))
+print(type(0.0))
+print(type("The quick brown fox jumps over the lazy dog"))

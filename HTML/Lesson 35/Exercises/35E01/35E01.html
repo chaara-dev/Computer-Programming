@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>"Imaginative Website"</title>
+        <style>
+            body {
+                background-color: rgb(81, 81, 202);
+            }
+            h2 {
+                text-align: center;
+            }
+            button {
+                position: absolute;
+                left: 47%;
+            }
+            #textbox01 {
+                text-align: center;
+            }
+            footer {
+                background-color: blueviolet;
+                position: absolute;
+                height: 20px;
+                left: 0px;
+                right: 0px;
+                bottom: 1px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>This is my title.</h2>
+        <h3 id="textbox01"></h3>
+
+        <button id="btn01" onclick="mySuperCoolFunction()">Click me!</button>
+
+
+        <footer>
+            <a href="https://google.com" target="_blank">Click me.</a>
+        </footer>
+        <script>
+            function mySuperCoolFunction() {
+                document.getElementById("textbox01").innerHTML = 
+                    "He won the challenge against all odds."
+            }
+        </script>
+    </body>
+
+    <!--
+        Not once did my line legnth go over 80.
+    -->
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>24E01</title>
+        <style>
+            .dropbutton {
+                background-color: skyblue;
+                color: white;
+                padding: 20px;
+                margin-top: 20px;
+                border: none;
+                cursor: pointer;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdowncontent {
+                display: none;
+                position: absolute;
+                background-color: skyblue;
+                min-width: 200px;
+                z-index: 1;
+            }
+            .dropdowncontent a {
+                color: blue;
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+            }
+            .dropdowncontent a:hover {
+                background-color: rgb(0, 153, 255);
+            }
+            .dropdown:hover .dropdowncontent {
+                display: block;
+            }
+            .dropdown:hover .dropbutton {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dropdown">
+            <button class="dropbutton">Main Menu</button>
+            <div class="dropdowncontent">
+                <a href="#">Sub Menu 1</a>
+                <a href="#">Sub Menu 2</a>
+                <a href="#">Sub Menu 3</a>
+                <a href="#">Sub Menu 4</a>
+                <a href="#">Sub Menu 5</a>
+            </div>
+        </div>
+    </body>
+</html>

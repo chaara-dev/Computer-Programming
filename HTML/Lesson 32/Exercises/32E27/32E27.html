@@ -1,0 +1,20 @@
+<script>
+    function oneLetterKeys(obj) {
+        var objKeys = Object.keys(obj)
+        var objValues = Object.values(obj)
+        var objects
+
+        for (x in objKeys && objValues) {
+            if (objKeys[x].length == 1) {
+                objects = Object.assign({}, objKeys[x] + objValues[x])
+                for (y in objects) {
+                    console.log(objects[y])
+                }
+            }
+        }
+    }
+
+    oneLetterKeys({a: 2, b: 3, cd: 4, de: 5, ef: 6, fg: 7, h: 8, i: 9})
+
+    // This is as good as I can get it, if someone else can do it better, by all means.
+</script>

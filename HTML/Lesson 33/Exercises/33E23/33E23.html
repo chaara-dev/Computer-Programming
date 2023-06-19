@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>33E23</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+
+        <script>
+            function assertType(value, type) {
+                if (Array.isArray(value) == true && type == "object") {
+                        throw "Expected: " + type + ". Found array" 
+                }
+                
+                if (type == "array") {
+                    if (Array.isArray(value) == true && type == "array") {
+                        return true
+                    }else {
+                        throw "Expected: " + type + ". Found " + typeof value
+                    }
+                }
+
+                if (typeof value == type) {
+                    return true
+                }else {
+                    throw "Expected: " + type + ". Found " + typeof value
+                }
+            }
+
+            console.log(assertType([], "array"))
+        </script>
+    </body>
+</html>

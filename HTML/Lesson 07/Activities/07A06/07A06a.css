@@ -1,0 +1,35 @@
+A {
+    text-decoration: none;
+}
+.title {
+    font-family: verdana;
+    font-size: 40pt;
+    color: mediumpurple;
+    background-image: url(dolphins.jpg);
+    text-transform: uppercase;
+}
+BODY {
+    background-color: yellow;
+    font-family: Arial;
+    background-image: url(pinkytile.jpg);
+    background-attachment: fixed;
+}
+UL {
+    font-family: Garamond;
+    font-size: 15pt;
+    color: white;
+    height: 150px;
+    width: 300px;
+    background-color: lightgreen;
+    background-image: url(tan.jpg);
+    text-align: right;
+}            
+.instructions {
+    font-size: 10pt;
+}
+.warning {
+    background-color: red;
+}
+.capitals {
+    text-transform: uppercase;
+}

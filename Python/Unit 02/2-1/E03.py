@@ -1,0 +1,5 @@
+print("race" + "car")
+print("T" + "y" + "l" + "e" + "r")
+print("im" + "mortal")
+print("foot" + "ball")
+print("cup" + "cake")

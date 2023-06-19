@@ -1,0 +1,77 @@
+<script>
+    class Country {
+        constructor(name, population, flagColors) {
+            this._name = name
+            this._population = population
+            this._flagColors = flagColors
+        }
+
+        get population() {
+            console.log(this._population)
+        }
+        get name() {
+            console.log(this._name)
+        }
+        get flagColors() {
+            console.log(this._flagColors)
+        }
+
+        increasePopulation(byHowMuch) {
+            if (typeof byHowMuch == "number") {
+                this._population = this._population + byHowMuch
+            }else if (typeof byHowMuch != "number") {
+                throw "error. Invalid Input"
+            }
+        }
+        decreasePopulation(byHowMuch) {
+            if (typeof byHowMuch == "number") {
+                this._population = this._population - byHowMuch
+            }else if (typeof byHowMuch != "number") {
+                throw "error. Invalid Input"
+            }
+        }
+
+        verifyFlag(arr) {
+                if (Array.isArray(arr) == true) {
+                    console.log(arr.every((x) => this._flagColors.some((y) => y.toLowerCase() === x.toLowerCase())));
+                }else {
+                    throw "error. Invalid Flag Verification. (not a string)"
+                }
+        }
+    }
+
+    // ---------------------------------------------------
+    // MAKING THE CLASSES
+    // ---------------------------------------------------
+
+    const canada = new Country("Canada", 38929902, ["red", "white"])
+
+    // ---------------------------------------------------
+    // RESULTS
+    // ---------------------------------------------------
+
+    canada.population // 38929902
+    canada.population = 0 // won't do anything
+    canada.population // 38929902 (again)
+
+    canada.name // "Canada"
+    canada.name = "Hello" // won't do anything
+    canada.name // "Canada" (again)
+
+    canada.flagColors // ["red", "white"]
+    canada.flagColors = ["blue", "green"] // won't do anything
+    canada.flagColors // ["red", "white"] (again)
+
+    canada.increasePopulation(11070098) // increase population by 11070098
+    canada.population // population becomes 50000000
+
+    canada.decreasePopulation(25000000) // decrease population by 25000000
+    canada.population // population becomes 25000000
+
+    canada.verifyFlag(["red", "red", "red", "white", "red", "white", "red", "red", "red"]) // true
+    canada.verifyFlag(["red", "white", "red", "blue"]) // false
+    canada.verifyFlag(["red", "whiTE", "red", "RED"]) // true
+
+    canada.increasePopulation("100") // throws an error
+    canada.decreasePopulation([1, 2, 3]) // throws an error
+</script>

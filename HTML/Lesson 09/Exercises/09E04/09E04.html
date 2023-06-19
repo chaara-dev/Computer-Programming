@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>09E40</title>
+        <style>
+            #lightup {
+                color: dodgerblue;
+                font-size: 40pt;
+                position: absolute;
+                left: 100px;
+                top: 100px;
+            }
+            #hover {
+                color: yellow;
+                font-size: 20pt;
+                position: absolute;
+                left: 100px;
+                top: 200px;
+            }
+        </style>
+    </head>
+    <body bgcolor="navy">
+        <div id="lightup">
+            I will light up!
+        </div>
+        <p>
+        <div id="hover" onmouseover="document.getElementById('lightup').style.color='white';" onmouseout="document.getElementById('lightup').style.color='dodgerblue';">
+            Hover over me!
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<html lang="en">
+    <head>
+        <title>Dino Game</title>
+        <style>
+            #game {
+                width: 500px;
+                height: 200px;
+                border: 1px solid black;
+                margin: auto;
+            }
+            #character {
+                width: 20px;
+                height: 50px;
+                background-color: red;
+                position: relative;
+                top: calc(200px - 50px);
+            }
+            @keyframes jump {
+                0% {top: 150px;}
+                30% {top: 100px;}
+                50% {top: 75px;}
+                70% {top: 100px;}
+                100% {top: 150px;}
+            }
+            .animate {
+                animation: jump 300ms linear;
+            }
+            #block {
+                width: 20px;
+                height: 20px;
+                background-color: green;
+                position: relative;
+                top: calc(200px - 50px - 20px);
+                left: calc(500px - 20px);
+                animation: block 1s infinite linear;
+            }
+            @keyframes block {
+                0% {left: 500px;}
+                100% {left: -10px;}
+            }
+        </style>
+    </head>
+    <body>  
+        <div id="game">
+            <div id="character"></div>
+            <div id="block"></div>
+        </div>
+        <script>
+            var character = document.getElementById("character");
+            document.addEventListener("click", jump);
+            function jump(){
+                character.classList.add("animate");
+                setTimeout(removeJump, 3000); 
+                if(character.classList == "animate"){return;}
+            };
+            function removeJump(){
+                character.classList.remove("animate");
+            }
+            var block = document.getElementById("block");
+            function checkDead(){
+                let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+                let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+                if (blockLeft<20 && blockLeft>-20 && characterTop>=130){
+                    alert("Game over");
+                }
+            }
+            setInterval(checkDead, 10);
+        </script>
+    </body>
+</html>

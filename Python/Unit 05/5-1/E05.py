@@ -1,0 +1,8 @@
+print("4LpH4")
+print("")
+print(chr(68))
+print(chr(117))
+print(chr(114))
+print(chr(73))
+print(chr(97))
+print(chr(78))

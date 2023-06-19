@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>31E23</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <button onclick="dateInformation(new Date())">Now.</button>
+
+        <script>
+            function dateInformation(d_year, d_month, d_day, d_hour, d_minute, d_seconds) {
+                var d_date = new Date()
+                // d_date.setFullYear(d_year)
+                // d_date.setMonth(d_month)
+                // d_date.setDate(d_day)
+                // d_date.setHours(d_hour)
+                // d_date.setMinutes(d_minute)
+                // d_date.setSeconds(d_seconds)
+                
+                var currentSeconds = d_date.getSeconds()
+                currentSeconds = ("0" + currentSeconds).slice(-2)
+
+                var currentMinutes = d_date.getMinutes()
+                currentMinutes = ("0" + currentMinutes).slice(-2)
+
+                var currentHours = d_date.getHours()
+                currentHours = ("0" + currentHours).slice(-2)
+                
+                if (d_date.getHours() > 12) {
+                    currentHours = currentHours - 12
+                }
+
+                if (d_date.getHours() == 1 || d_date.getHours() == 2 || d_date.getHours() == 3 || d_date.getHours() == 4 || d_date.getHours() == 5 || d_date.getHours() == 6 || d_date.getHours() == 0) {
+                    alert(currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + "NIGHTTIME")
+                }
+                if (d_date.getHours() == 18 || d_date.getHours() == 19 || d_date.getHours() == 20 || d_date.getHours() == 21 || d_date.getHours() == 22 || d_date.getHours() == 23 || d_date.getHours() == 24) {
+                    alert(currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + "NIGHTTIME")
+                }
+                if (d_date.getHours() == 12 || d_date.getHours() == 13 || d_date.getHours() == 14 || d_date.getHours() == 15 || d_date.getHours() == 16 || d_date.getHours() == 17) {
+                    alert(currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + "AFTERNOON")
+                }
+                if (d_date.getHours() == 7 || d_date.getHours() == 8 || d_date.getHours() == 9 || d_date.getHours() == 10 || d_date.getHours() == 11) {
+                    alert(currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + "MORNING")
+                }
+
+                console.log(d_date)
+            }
+
+            // dateInformation(2022, 6, 20, 15, 9, 4)
+        </script>
+    </body>
+</html>

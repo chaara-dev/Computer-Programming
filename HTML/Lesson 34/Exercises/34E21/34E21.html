@@ -1,0 +1,79 @@
+<script>
+    class Person {
+        constructor(name, age, friends) {
+            this._name = name
+            this._age = age
+            this._friends = friends
+        }
+        
+        get name() {
+            console.log(this._name)
+        }
+        get age() {
+            console.log(this._age)
+        }
+
+        isFriend(person) {
+            if (person._friends == true) {
+                console.log(true)
+            }else if (person._friends == false) {
+                console.log(false)
+            }
+        }
+        addFriend(person) {
+            console.log("ok!")
+            person._friends = true
+        }
+
+        get isAdult() {
+            if (this._age >= 18) {
+                console.log(true)
+            }else if (this._age <= 18) {
+                console.log(false)
+            }
+        }
+        get isChild() {
+            if (this._age <= 18) {
+                console.log(true)
+            }else if (this._age >= 18) {
+                console.log(false)
+            }
+        }
+
+        birthday() {
+            console.log("happy bday!")
+            this._age = this._age + 1
+        }
+    }
+
+    // ---------------------------------------------------
+    // MAKING THE CLASSES
+    // ---------------------------------------------------
+
+    const p1 = new Person("Bob", 20, false)
+    const p2 = new Person("Alice", 17, false)
+
+    
+    // ---------------------------------------------------
+    // RESULTS
+    // ---------------------------------------------------
+    
+    p1.name // "Bob"
+    p1.name = "e" // This will not work because there is no setter
+    p1.name // still "Bob"
+
+    p1.isFriend(p2) // false
+    p1.addFriend(p2) // Add p2 as a friend for p1 - "ok!"
+    p1.isFriend(p2) // true
+
+    p2.isFriend(p1) // false
+    
+    p1.isAdult // true
+    p1.isChild // false
+
+    p2.isAdult // false
+    p2.isChild // true
+    p2.birthday(); // Add one to p2 age - "happy bday!"
+    p2.age // 18
+    p2.isAdult // true
+</script>

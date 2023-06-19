@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>34A15</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h2>Javascript "this"</h2>
+        <p>This example demonstrates that in a regular function, the "this" keyword represents different objects depending on how the function was called.</p>
+
+        <p>Click the button to execute the "hello" function again, and you will see that this time "this" represents the button object.</p>
+
+        <button id="btn">Click me!</button>
+
+        <p id="demo"></p>
+
+        <script>
+            hello = function() {
+                document.getElementById("demo").innerHTML += this;
+            }
+
+            // The window event calls the function:
+            window.addEventListener("load", hello)
+
+            // A button object calls the function:
+            document.getElementById("btn").addEventListener("click", hello)
+        </script>
+    </body>
+</html>

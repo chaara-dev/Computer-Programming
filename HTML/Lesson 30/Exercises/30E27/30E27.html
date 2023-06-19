@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>30E27</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            function arrayInfo(array = []) {
+                var arrayLength = array.length
+                var allString = array => array.every(element => typeof element === "string")
+                var allNumber = array => array.every(element => typeof element === "number")
+                var allObject = array => array.every(element => typeof element === "object")
+                var allUndefined = array => array.every(elemet => typeof elemet === "undefined")
+
+                console.log(
+                    "RESULTS:",
+                    "\n", 
+                    "Length: " + arrayLength, 
+                    "\n", 
+                    "allNumber: " + allNumber(array),
+                    "\n",
+                    "allString: " + allString(array),
+                    "\n",
+                    "allObject: " + allObject(array),
+                    "\n",
+                    "allUndefined: " + allUndefined(array)
+                )
+            }
+
+            arrayInfo([1,2,[],"four"])
+        </script>
+    </body>
+</html>

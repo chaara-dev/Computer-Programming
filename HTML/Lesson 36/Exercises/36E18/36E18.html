@@ -1,0 +1,20 @@
+<script>
+	var student = {
+		fullName: "Tyler Scott",
+		grade: 11,
+		studentId: 2093048,
+		get ID() {
+			return 'nw' + this.grade;
+		},
+		set grade(input) {
+			if (number.isInteger(input)) {
+				this.studentId = input;
+			}
+			else {
+				throw "oops!"
+			}
+		}
+	}
+
+	console.log(student)
+</script>

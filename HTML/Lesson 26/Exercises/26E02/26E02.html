@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            #onbtn, #on {
+                visibility: hidden;
+            }
+        </style>
+        <script>
+            function on() {
+                document.getElementById("onbtn").style.visibility = "hidden"
+                document.getElementById("on").style.visibility = "hidden"
+                document.getElementById("offbtn").style.visibility = "visible"
+                document.getElementById("off").style.visibility = "visible"
+            }
+            function off() {
+                document.getElementById("onbtn").style.visibility = "visible"
+                document.getElementById("on").style.visibility = "visible"
+                document.getElementById("offbtn").style.visibility = "hidden"
+                document.getElementById("off").style.visibility = "hidden"
+            }
+        </script>
+    </head>
+    <body>
+        <img src="pic_bulbon.gif" onclick="on()" id="onbtn">
+        <div id="on">Turn on the light</div>
+        <img src="pic_bulboff.gif" onclick="off()" id="offbtn">
+        <div id="off">Turn on the light</div>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>10E07a</title>
+        <style>
+            body {
+                background-image: url(blackswan.jpg);
+            }
+            h1 {
+                text-align: center;
+            }
+            #image1 {
+                position: absolute;
+                top: 100px;
+                right: 0px;
+            }
+            #image2 {
+                position: absolute;
+                top: 200px;
+                right: 0px;
+                visibility: hidden;
+            }
+            h1 {
+                color: lightskyblue;
+            }
+            h1:hover {
+                background-color: green;
+            }
+            #mana {
+                color: white;
+            }
+            #info {
+                color: yellow;
+                position: absolute;
+                top: 430px;
+            }
+            #clickme1 {
+                top: 500px;
+                color: white;
+                position: absolute;
+                font-size: 40px;
+            }
+            #clickme2 {
+                top: 550px;
+                color: white;
+                position: absolute;
+                font-size: 40px;
+            }
+            #clickme1:hover {
+                background-color: red;
+            }
+            #clickme2:hover {
+                background-color: blue;
+            }
+            #reload {
+                position: absolute;
+                color: white;
+                text-decoration: overline;
+                right: 40px;
+                bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tyler1</h1>
+        <div id="image1">
+            <img src="tyler1.jfif">
+        </div>
+        <div id="image2">
+            <img src="tyler2.jfif">
+        </div>
+        <q id="mana">
+            You have no mana!
+        </q>
+        <address id="info">
+            Born: March 7, 1995
+            <br />
+            Career: <i>Can't read the example :/</i>
+            <br />
+            Nickname: <i>Can't read the example :/</i>
+        </address>
+        <div id="clickme1" onclick="document.getElementById('image1').style.visibility = 'hidden';">
+            Click me!
+        </div>
+        <div id="clickme2" onclick="document.getElementById('image2').style.visibility = 'visible';">
+            Then, Click me!
+        </div>
+        <div id="reload" onclick="window.location.reload()">
+            Click me to reload the page!
+        </div>
+    </body>
+</html>

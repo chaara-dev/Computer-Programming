@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>24E03</title>
+        <style>
+            a[href^="#"] {
+                background-color: gold;
+            }
+            a[href*="example"] {
+                background-color: silver;
+            }
+            a[href*="insensitive" i] {
+                color: cyan;
+            }
+            a[href$=".org"] {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href="#numero-uno">Internal Link</a>
+            </li>
+            <li>
+                <a href="examplelink.com">Example Link</a>
+            </li>
+            <li>
+                <a href="#insensitive">Insensitive Internal Link</a>
+            </li>
+            <li>
+                <a href="Exampleorglink.org">Example .org link</a>
+            </li>
+        </ul>
+    </body>
+</html>

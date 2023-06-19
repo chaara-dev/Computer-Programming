@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>27E25</title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            section {
+                width: 25%;
+                float: left;
+                text-align: center;
+            }
+        </style>
+        <script>
+            var x;
+            x = 0;
+        </script>
+    </head>
+    <body>
+        <h1>Supermarket</h1>
+        <p>
+            Your balance is $<span id="balance"></span>
+        </p>
+
+        <br /><br /><br /><br />
+
+        <section>
+            <img src="uranium.jpg" alt="Uranium-235" width="100px" height="100px">
+            <p>
+                Uranium: $60
+            </p>
+            <button type="button" onclick="buy1()">Buy</button>
+            <button type="button" onclick="sell1()">Sell</button>
+        </section>
+
+
+        <section>
+            <img src="milk.jpg" alt="Milk" width="100px" height="100px">
+            <p>
+                Milk: $4
+            </p>
+            <button type="button" onclick="buy2()">Buy</button>
+            <button type="button" onclick="sell2()">Sell</button>
+        </section>
+
+
+        <section>
+            <img src="powder.jpg" alt="Baby Powder" width="100px" height="100px">
+            <p>
+                Baby Powder: $35
+            </p>
+            <button type="button" onclick="buy3()">Buy</button>
+            <button type="button" onclick="sell3()">Sell</button>
+        </section>
+
+
+        <section>
+            <img src="gum.jpg" alt="Pack of Gum" width="100px" height="100px">
+            <p>
+                Pack of Gum: $1
+            </p>
+            <button type="button" onclick="buy4()">Buy</button>
+            <button type="button" onclick="sell4()">Sell</button>
+        </section>
+
+        <script>
+            document.getElementById("balance").innerHTML = x
+
+            function buy1() {
+                x += 60
+                document.getElementById("balance").innerHTML = x
+            }
+            function sell1() {
+                x -= 60
+                document.getElementById("balance").innerHTML = x
+            }
+
+            function buy2() {
+                x += 4
+                document.getElementById("balance").innerHTML = x
+            }
+            function sell2() {
+                x -= 4
+                document.getElementById("balance").innerHTML = x
+            }
+
+            function buy3() {
+                x += 35
+                document.getElementById("balance").innerHTML = x
+            }
+            function sell3() {
+                x -= 35
+                document.getElementById("balance").innerHTML = x
+            }
+
+            function buy4() {
+                x += 1
+                document.getElementById("balance").innerHTML = x
+            }
+            function sell4() {
+                x -= 1
+                document.getElementById("balance").innerHTML = x
+            }
+        </script>
+    </body>
+</html>

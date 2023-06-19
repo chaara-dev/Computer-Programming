@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>29E26</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <button type="button" onclick="sand()">Sand</button>
+        <button type="button" onclick="gravel()">Gravel</button>
+        <button type="button" onclick="stone()">Stone</button>
+        <button type="button" onclick="diamond()">Diamond</button>
+
+        <br />
+        <br />
+        <br />
+
+        <ul>
+            <li id="item1">
+
+            </li>
+            <li id="item2">
+
+            </li>
+            <li id="item3">
+
+            </li>
+        </ul>
+
+        <script>
+            function sand() {
+                document.getElementById("item1").innerHTML = "Name: <b>Sand</b>"
+                document.getElementById("item2").innerHTML = "Toughness: <b>0.22</b>"
+                document.getElementById("item3").innerHTML = "Texture: <b>Rough</b>"
+            }
+            function gravel() {
+                document.getElementById("item1").innerHTML = "Name: <b>Gravel</b>"
+                document.getElementById("item2").innerHTML = "Toughness: <b>0.44</b>"
+                document.getElementById("item3").innerHTML = "Texture: <b>Rough</b>"
+            }
+            function stone() {
+                document.getElementById("item1").innerHTML = "Name: <b>Stone</b>"
+                document.getElementById("item2").innerHTML = "Toughness: <b>4</b>"
+                document.getElementById("item3").innerHTML = "Texture: <b>Smooth</b>"
+            }
+            function diamond() {
+                document.getElementById("item1").innerHTML = "Name: <b>Diamond</b>"
+                document.getElementById("item2").innerHTML = "Toughness: <b>10</b>"
+                document.getElementById("item3").innerHTML = "Texture: <b>Smooth</b>"
+            }
+        </script>
+    </body>
+</html>

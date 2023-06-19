@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>29E23</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+
+        <script>
+            function capitalizeFirstWord(string) {
+                var spaceKey = string.indexOf(" ")
+                var firstWord = string.slice(0, spaceKey)
+                var rest = string.slice(spaceKey, Infinity)
+                var upperFirstWord = firstWord.toUpperCase()
+                return(upperFirstWord + rest)
+            }
+
+            console.log(capitalizeFirstWord("never gonna give you up"))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>27E23</title>
+        <script>
+            var x;
+            x = 0
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="plus1()">+1</button>
+        <button type="button" onclick="plus5()">+5</button>
+        <button type="button" onclick="plus10()">+10</button>
+        <button type="button" onclick="times2()">x2</button>
+        <button type="button" onclick="times10()">x10</button>
+
+        <button type="button" onclick="shownumber()">?</button>
+        <button type="button" onclick="zero()">0</button>
+
+        <button type="button" onclick="minus1()">-1</button>
+        <button type="button" onclick="minus5()">-5</button>
+        <button type="button" onclick="minus10()">-10</button>
+        <button type="button" onclick="divide2()">/2</button>
+        <button type="button" onclick="divide10()">/10</button>
+
+
+        <script>
+            function plus1() {
+                ++x
+            }
+            function plus5() {
+                ++x + ++x + ++x + ++x + ++x
+            }
+            function plus10() {
+                ++x + ++x + ++x + ++x + ++x + ++x + ++x + ++x + ++x + ++x
+            }
+            function times2() {
+                x *= 2
+            }
+            function times10() {
+                x *= 10
+            }
+            function shownumber() {
+                window.alert(x)
+            }
+            function zero() {
+                x = 0
+            }
+            function minus1() {
+                --x
+            }
+            function minus5() {
+                --x - --x - --x - --x - --x
+            }
+            function minus10() {
+                --x - --x - --x - --x - --x - --x - --x - --x - --x - --x
+            }
+            function divide2() {
+                x /= 2
+            }
+            function divide10() {
+                x /= 10
+            }
+        </script>
+    </body>
+</html>

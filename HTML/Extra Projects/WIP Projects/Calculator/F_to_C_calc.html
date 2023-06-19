@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fahrenheit to Celsius Calculator</title>
+    <style>
+        body {
+            background-color: gray;
+            text-align: center;
+            user-select: none;
+        }
+
+        #textbox {
+            visibility: hidden;
+        }
+
+        .text {
+            user-select: none;
+        }
+
+        #hint {
+            opacity: 0.4;
+        } 
+
+        #myInput {
+            border-radius: 15px;
+            height: 75px;
+            width: 150px;
+            text-align: center;
+            border: 2px solid black;
+            font-size: 30px;
+        }
+
+        /* Removes the arrows on the left of the number input */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            display: none;
+            margin: 0;
+        }
+
+        #outputBox-2 {
+            user-select: all;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="text">
+        Input a number to calculate.
+    </h2>
+    <p id="hint">(press Enter to input)</p>
+    <input type="number" placeholder="Number:" id="myInput" class="items text" onkeypress="getInputValue(event)">
+
+    <h2 id="textbox" class="text">
+        <span id="outputBox-1"></span>
+        Fahrenheit is
+        <span id="outputBox-2"></span>
+        Celsius.
+    </h2>
+
+    <script>
+        function getInputValue(event) {
+            // Check if 'Enter' key has been pressed
+            var x = event.code;
+            if (x != "Enter") {
+                validate();
+            }
+
+            // Selecting the input element and get its value
+            var inputVal = document.getElementById("myInput").value;
+
+            // Convert given value to Celsius
+            function toCelsius(input) {
+                return ((5 / 9) * (input - 32)).toFixed(2);
+            }
+
+            function printInfo() {
+                // Show input and output in text box (outputBox-2)
+                document.getElementById("outputBox-1").innerHTML = inputVal + "°"
+                document.getElementById("outputBox-2").innerHTML = toCelsius(inputVal) + "°"
+                document.getElementById("textbox").style.visibility = "visible"
+            }
+
+            // Checking if the input box has an input
+            if (inputVal != "") {
+                printInfo()
+            } else {
+                alert("You need to fill in the input box.")
+            }
+        }
+    </script>
+</body>
+
+</html>

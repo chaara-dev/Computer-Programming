@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>30E22</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            function capitalize(sentence) {
+                sentence[0].toUpperCase() + sentence.substring(1)
+                var wordsArray = sentence.split(" ")
+                for (let x = 0; x < wordsArray.length; x++) {
+                    wordsArray[x] = wordsArray[x][0].toUpperCase() + wordsArray[x].substr(1);
+                }
+
+                alert(wordsArray.join(" "))
+            }
+
+            capitalize("Just who the hell do you think I am?")
+        </script>
+    </body>
+</html>

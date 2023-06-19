@@ -1,0 +1,15 @@
+*{box-sizing: border-box;}
+BODY {background-color:gold;}
+section
+section:after {content:""; display:table; clear: both;}
+footer{background-color: white;
+text-align:center;color:goldenrod;padding:10px;font-family:Courier}
+h1 {font-family:Courier;color:white;text-align:center;}
+h2 {font-family:Courier;color:white; text-align:center;}
+a:link {color:white;}
+a:visited {color:gray;}
+a:active {color:white;}
+.main {float:left;padding: 10px;width:50%; font-family:Courier;color:white; text-align:center;}
+.phototext {background-color:goldenrod;padding:5px;float:center;border-color:white; border-width:5px;border-style:solid;width:70%;}
+.articletext {float:center; padding:20px;border-color: white; border-width:2px;border-style:dashed;font-size:14pt;background-color:goldenrod;text-align:left;font-family: Georgia;text-decoration:none;}
+.navtext {float:center; padding: 15px; border-color:white;border-width:2px;border-style:dashed;font-size:14pt;background-color:goldenrod;text-align:left;}

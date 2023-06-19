@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>33E07</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2 id="replaceBox">Please visit Microsoft and Microsoft</h2>
+
+        <button type="button" onclick="myFunction()" id="button">Try it.</button>
+
+        <script>
+            function myFunction() {
+                var text = document.getElementById("replaceBox").innerHTML;
+
+                document.getElementById("replaceBox").innerHTML = text.replace(/Microsoft/i, "W3Schools")
+
+                document.getElementById("button").innerHTML = "Again."
+            }
+        </script>
+    </body>
+</html>

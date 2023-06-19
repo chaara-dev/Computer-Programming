@@ -1,0 +1,18 @@
+<script>
+    function flipObject(obj) {
+        
+        var keysArr = Object.keys(obj)
+        var valuesArr = Object.values(obj)
+
+        var newObj = {}
+
+        for (i in valuesArr && keysArr) {
+            newObj[i] = valuesArr[i] + ": " + keysArr[i]
+        }
+
+        console.log(newObj)
+    }
+
+    flipObject({this:"Tyler", is:"is", a:16, test:"and cool"})
+    flipObject({a: 2, b: undefined, c: null, d: true, e: 2})
+</script>

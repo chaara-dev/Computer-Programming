@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>30A04</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>Javascript Arrays</h2>
+        <p>
+            The length property returns the length of an array.
+        </p>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <script>
+            var fruits = [ "Banana", "Orange", "Apple", "Mango" ]; // Length = 4 -> with []
+            var fruitz = ( "Banana", "Orange", "Apple", "Mango" ); // Length = 5 -> with ()
+
+            document.getElementById("demo1").innerHTML = fruits.length;
+            document.getElementById("demo2").innerHTML = fruitz.length;
+        </script>
+    </body>
+</html>

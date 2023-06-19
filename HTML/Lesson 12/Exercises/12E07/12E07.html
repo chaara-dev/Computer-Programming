@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>12E07</title>
+        <style>
+            #title {
+                text-align: center;
+            }
+            #button {
+                position: absolute;
+                top: 30px;
+                left: 650px;
+            }
+            #text2 {
+                position: absolute;
+                visibility: hidden;
+            }
+            #trophy {
+                position: absolute;
+                visibility: hidden;
+            }
+            #text3 {
+                position: absolute;
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <script>
+        function click1() {
+            document.getElementById("button").style.top = "500px";
+            document.getElementById("button").style.left = "150px";
+            document.getElementById("button").setAttribute("onclick", "click2()");
+        }
+        function click2() {
+            document.getElementById("button").style.top = "100px";
+            document.getElementById("button").style.left = "450px";
+            document.getElementById("button").setAttribute("onclick", "click3()");
+        }
+        function click3() {
+            document.getElementById("button").style.top = "600px";
+            document.getElementById("button").style.left = "600px";
+            document.getElementById("button").setAttribute("onclick", "click4()");
+        }
+        function click4() {
+            document.getElementById("button").style.top = "25px";
+            document.getElementById("button").style.left = "1000px";
+            document.getElementById("button").setAttribute("onclick", "click5()");
+        }
+        function click5() {
+            document.getElementById("button").style.top = "300px";
+            document.getElementById("button").style.left = "600px";
+            document.getElementById("button").setAttribute("onclick", "click6()");
+        }
+        function click6() {
+            document.getElementById("button").style.top = "10px";
+            document.getElementById("button").style.left = "10px";
+            document.getElementById("button").setAttribute("onclick", "click7()");
+        }
+        function click7() {
+            document.getElementById("button").style.top = "500px";
+            document.getElementById("button").style.left = "150px";
+            document.getElementById("button").setAttribute("onclick", "click8()");
+        }
+        function click8() {
+            document.getElementById("button").style.top = "600px";
+            document.getElementById("button").style.left = "1200px";
+            document.getElementById("button").setAttribute("onclick", "click9()");
+        }
+        function click9() {
+            document.getElementById("button").style.top = "500px";
+            document.getElementById("button").style.left = "150px";
+            document.getElementById("button").setAttribute("onclick", "click10()");
+        }
+        function click10() {
+            document.getElementById("button").style.top = "500px";
+            document.getElementById("button").style.left = "150px";
+            document.getElementById("button").style.visibility = "hidden";
+
+            document.getElementById("text2").style.visibility = "visible";
+            document.getElementById("text2").style.position = "static";
+            document.getElementById("text2").style.textAlign = "center";
+
+            document.getElementById("trophy").style.visibility = "visible";
+            document.getElementById("trophy").style.left = "580px";
+            document.getElementById("trophy").style.top = "65px";
+
+            document.getElementById("text3").style.visibility = "visible";
+            document.getElementById("text3").style.position = "static";
+            document.getElementById("text3").style.textAlign = "center";
+        }
+    </script>
+    <meta http-equiv="refresh" content="15">
+    <body>
+        <!--
+            I'm putting this comment because the instructions say I have to.
+        -->
+        <div id="title">
+            This page will refresh in 15 seconds. Hurry!
+        </div>
+
+        <button type="button" id="button" onclick="click1()">
+            Click Me!
+        </button>
+
+        <div id="text2">
+            Ok, You Win. Here's a trophy for your hard work.
+        </div>
+
+        <img src="trophy.jfif" id="trophy">
+
+        <div id="text3">
+            <a href="12E07a.html">
+                Click this link to take you to the next game.
+            </a>
+        </div>
+    </body>
+</html>

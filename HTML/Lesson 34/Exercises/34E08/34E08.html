@@ -1,0 +1,14 @@
+<script>
+    class Person {
+        constructor(name) {
+            this.person_name = name
+        }
+        present(x) {
+            return x + ", how are you? I'm " + this.person_name + "."
+        }
+    }
+
+    person = new Person("Tyler")
+
+    console.log(person.present("Hello"))
+</script>

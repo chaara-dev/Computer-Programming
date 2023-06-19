@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <title>11E04</title>
+        <style>
+            body {
+                background-image: url(world.jpg);
+            }
+            #title {
+                text-align: center;
+            }
+
+
+            #places {
+                color: blue;
+            }
+            #i {
+                color: red;
+            }
+            #want {
+                color: black;
+            }
+            #to1 {
+                color: yellow;
+            }
+            #travel {
+                color: green;
+            }
+            #to2 {
+                color: skyblue;
+            }
+
+
+            #buttons {
+                text-align: center;
+            }
+
+            
+
+            #earth-img {
+                position: absolute;
+                top: 150px;
+                left: 475px;
+            }
+
+
+
+            #hawaii-img {
+                position: absolute;
+                top: 150px;
+                left: 475px;
+                visibility: hidden;
+            }
+            #hawaii {
+                position: absolute;
+                top: 550px;
+                text-align: center;
+                visibility: hidden;
+            }
+
+            
+
+            #disney-img {
+                position: absolute;
+                top: 150px;
+                left: 475px;
+                visibility: hidden;
+            }
+            #disney {
+                position: absolute;
+                top: 550px;
+                text-align: center;
+                visibility: hidden;
+            }
+
+
+
+            #singapore-img {
+                position: absolute;
+                top: 150px;
+                left: 475px;
+                visibility: hidden;
+            }
+            #singapore {
+                position: absolute;
+                top: 550px;
+                left: 150px;
+                visibility: hidden;
+            }
+
+
+
+            #cabo-img {
+                position: absolute;
+                top: 150px;
+                left: 475px;
+                visibility: hidden;
+            }
+            #cabo {
+                position: absolute;
+                top: 550px;
+                text-align: center;
+                visibility: hidden;
+            }
+        </style>
+        <script>
+            function hawaii() {
+                document.getElementById("earth-img").style.visibility = "hidden";
+
+                document.getElementById("hawaii-img").style.visibility = "visible";
+                document.getElementById("hawaii").style.visibility = "visible";
+
+                document.getElementById("disney-img").style.visibility = "hidden";
+                document.getElementById("disney").style.visibility = "hidden";
+
+                document.getElementById("singapore-img").style.visibility = "hidden";
+                document.getElementById("singapore").style.visibility = "hidden";
+
+                document.getElementById("cabo-img").style.visibility = "hidden";
+                document.getElementById("cabo").style.visibility = "hidden";
+            }
+            function disney() {
+                document.getElementById("earth-img").style.visibility = "hidden";
+
+                document.getElementById("hawaii-img").style.visibility = "hidden";
+                document.getElementById("hawaii").style.visibility = "hidden";
+
+                document.getElementById("disney-img").style.visibility = "visible";
+                document.getElementById("disney").style.visibility = "visible";
+
+                document.getElementById("singapore-img").style.visibility = "hidden";
+                document.getElementById("singapore").style.visibility = "hidden";
+
+                document.getElementById("cabo-img").style.visibility = "hidden";
+                document.getElementById("cabo").style.visibility = "hidden";
+            }
+            function singapore() {
+                document.getElementById("earth-img").style.visibility = "hidden";
+
+                document.getElementById("hawaii-img").style.visibility = "hidden";
+                document.getElementById("hawaii").style.visibility = "hidden";
+
+                document.getElementById("disney-img").style.visibility = "hidden";
+                document.getElementById("disney").style.visibility = "hidden";
+
+                document.getElementById("singapore-img").style.visibility = "visible";
+                document.getElementById("singapore").style.visibility = "visible";
+
+                document.getElementById("cabo-img").style.visibility = "hidden";
+                document.getElementById("cabo").style.visibility = "hidden";
+            }
+            function cabo() {
+                document.getElementById("earth-img").style.visibility = "hidden";
+
+                document.getElementById("hawaii-img").style.visibility = "hidden";
+                document.getElementById("hawaii").style.visibility = "hidden";
+
+                document.getElementById("disney-img").style.visibility = "hidden";
+                document.getElementById("disney").style.visibility = "hidden";
+
+                document.getElementById("singapore-img").style.visibility = "hidden";
+                document.getElementById("singapore").style.visibility = "hidden";
+
+                document.getElementById("cabo-img").style.visibility = "visible";
+                document.getElementById("cabo").style.visibility = "visible";
+            }
+        </script>
+    </head>
+    <body>
+
+
+        <h1 id="title">
+            <span id="places">
+                Places
+            </span>
+            <span id="i">
+                I
+            </span>
+            <span id="want">
+                Want
+            </span>
+            <span id="to1">
+                To
+            </span>
+            <span id="travel">
+                Travel
+            </span>
+            <span id="to2">
+                To
+            </span>
+        </h1>
+
+
+        <div id="buttons">
+            <button type="button" onclick="hawaii()">
+                Hawaii, USA
+            </button>
+            <button type="button" onclick="disney()">
+                DisneyWorld Orlando
+            </button>
+            <button type="button" onclick="singapore()">
+                Singapore
+            </button>
+            <button type="button" onclick="cabo()">
+                Cabo, Mexico
+            </button>
+        </div>
+
+
+        <img src="earth.png" width="400px" height="400px" id="earth-img">
+
+        
+        <img src="hawaii.jpg" width="400px" height="400px" id="hawaii-img">
+        <div id="hawaii">
+            <q>
+                The gorgeous scenery, aloha spirit, stunning beaches, and exiting activites are just a few of the reasons Hawaii is continually rated as top vacation destination. Plus, it's also the perfect place to relax, unwind, and disconnect from your daily routine. 
+            </q>
+        </div>
+
+
+        <img src="disney.jpg" width="400px" height="400px" id="disney-img">
+        <div id="disney">
+            <q>
+                The Walt Disney in Lake Buena Vista near Orlando, Florida is the world's most visited family-friendly destination. As big as the city of San Francisco, the complex encompasses several theme parks, many themed hotels and resorts, two water parks, and more!
+            </q>
+        </div>
+
+
+        <img src="singapore.jpg" width="400px" height="400px" id="singapore-img">
+        <div id="singapore">
+            <q>
+                Whether you're an insatiable foodie, a lover of the arts or an irrepressable daredevil, Singapore's endless posibilities are certain to fuel the fires of your passion.
+            </q>
+        </div>
+
+
+        <img src="cabo.jpg" width="400px" height="400px" id="cabo-img">
+        <div id="cabo">
+            <q>
+                There is no bad time to go to Cabo San Lucas. This seaside paradise, set at the southernmost point of the Baja California peninsula, boasts warm weather throughout the yearm and an enormous array of high-end resort accomodations and water-based activity options.
+            </q>
+        </div>
+    </body>
+</html>

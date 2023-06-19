@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>31E28</title>
+        <style>
+            #textbox1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                opacity: 0.17;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="textbox1"></h1>
+        <p>Press ctrl + shift + J to view console log</p>
+        <script>
+            function verifyPassport({name: nameInput, age: ageInput, country: countryInput, expiry: expiryInput}) {
+                var infoArray = [nameInput, ageInput, countryInput, expiryInput]
+                var allTrue
+                var validName, validAge, validCountry, validExpiry
+
+                var countryString = infoArray[2].toString()
+                var countryLength = countryString.length
+
+                var nameString = infoArray[0].toString()
+                var nameLength = nameString.length
+
+                var today = new Date()
+
+                
+
+                if (nameLength != 0) {
+                    console.log("Valid Name")
+                    validName = true
+                }else {
+                    console.log("Invalid Name")
+                    validName = false
+                }
+
+
+
+                if (infoArray[1] >= 0 && infoArray[1] <= 201) {
+                    console.log("Valid Age")
+                    validAge = true
+                }else {
+                    console.log("Invalid Age")
+                    validAge = false
+                }
+
+
+
+                if (countryLength == 2) {
+                    console.log("Valid Country")
+                    validCountry = true
+                }else {
+                    console.log("Invalid Country")
+                    validCountry = false
+                }
+
+
+
+                if (infoArray[3] >= today) {
+                    console.log("Valid Date")
+                    validExpiry = true
+                }else {
+                    console.log("Invalid Date")
+                    validExpiry = false
+                }
+
+
+
+                if (validName && validAge && validCountry && validExpiry === true) {
+                    allTrue = "Valid Passport"
+                    var sentence = "This is a "
+                }else {
+                    allTrue = "Invalid Passport"
+                    var sentence = "This is an "
+                }
+                
+                console.log(infoArray)
+                console.log(sentence + allTrue)
+                document.getElementById("textbox1").innerHTML = allTrue
+            }
+
+            verifyPassport({name: "Bob", age: 45, country: "CA", expiry: new Date(2023, 9, 4)})
+        </script>
+    </body>
+</html>

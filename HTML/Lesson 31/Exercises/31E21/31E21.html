@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>31E21</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            function checkWeekend(d_year, d_month, d_day) {
+                var d_date = new Date()
+
+                d_date.setFullYear(d_year)
+                d_date.setMonth(d_month)
+                d_date.setDate(d_day)
+                console.log(d_date)
+
+                if (d_date.getDay() == 0 || d_date.getDay() == 6) {
+                    alert("YES.")
+                }else {
+                    alert("NO.")
+                }
+            }
+            checkWeekend(2022, 6, 20)
+        </script>
+    </body>
+</html>

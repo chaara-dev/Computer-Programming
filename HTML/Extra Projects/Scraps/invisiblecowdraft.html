@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Invisible Cow</title>
+        <script src="https://randojs.com/1.0.0.js"></script>
+        <script>
+            function showRandomNumber(){
+                document.getElementById("number").innerHTML = rando(0, 451);
+            }
+        </script>
+        <style>
+            #cow {
+                height: 150px;
+                width: 126px;
+                position: sticky;
+            }
+            /*
+            #number {
+                font-size: 100px;
+                text-align: center;
+                margin: 50px auto;
+                font-family: arial, sans-serif;
+            }
+            */
+        </style>
+    </head>
+    <body onload="showRandomNumber();">
+        <!--
+            <div id="number">
+        -->
+        </div>
+        <div id="cow" 
+        onclick=
+           "document.getElementById('cow').style.opacity='1';
+            document.getElementById('cow').style.top = rando(0,innerHeight)
+            document.getElementById('cow').style.left = rando(0, innerWidth);" 
+        ondblclick=
+           "document.getElementById('cow').style.opacity='1';">
+                <img src="apple.gif">
+        </div>
+    </body>
+</html>

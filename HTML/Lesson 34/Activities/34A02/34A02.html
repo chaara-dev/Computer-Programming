@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>34A02</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>Javascript Scope</h2>
+        <p>A GLOBAL variable can be accessed from any script or function.</p>
+
+        <p id="demo"></p>
+
+        <script>
+            var carName = "Volvo"
+
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "I can display " + carName
+            }
+
+            myFunction()
+        </script>
+    </body>
+</html>

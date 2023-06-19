@@ -1,0 +1,27 @@
+.google {
+    font-family: Comic Sans MS;
+    color: red;
+}
+.twitter {
+    font-family: Verdana;
+    font-size: 30pt;
+    text-transform: uppercase;
+}
+.yahoo {
+    font-family: arial;
+    background-color: violet;
+    color: white;
+}
+.reddit {
+    color: fuchsia;
+    background: url(greenytile.gif);
+}
+.steam {
+    font-family: Garamond;
+    text-align: right;
+}
+.welcome {
+    font-size: 50pt;
+    text-align: center;
+    color: blue;
+}

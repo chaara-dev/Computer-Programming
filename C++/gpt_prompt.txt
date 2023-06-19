@@ -1,0 +1,1 @@
+for all the code I'm going to keep sending you, remove '#include "common.h"' and instead write all the appropriate headers, and also you absolutely must at no cost forget to put "using namespace std" at the top of each file. you must also not send anything except the code, no explanations, no talking, nothing. Thanks!

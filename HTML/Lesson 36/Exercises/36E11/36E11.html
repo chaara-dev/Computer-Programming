@@ -1,0 +1,18 @@
+<script>
+    function myFunction(input) {
+        var result = input.forEach(checkForA);
+        if (result) {
+            console.log(result);
+        } else {
+            other = input.filter(checkForA);
+            console.log(other);
+            console.log(other.length);
+        }
+    }
+
+    function checkForA(value) {
+        return (value[0] === 'a');
+    }
+
+    myFunction(["this", "is", "a", "test"])
+</script>

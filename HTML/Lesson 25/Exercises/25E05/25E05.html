@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>25E05</title>
+        <style>
+            h1 {
+                color: skyblue;
+            }
+            input[type=text] {
+                width: 100%;
+                display: inline-block;
+                border: 2px solid gray;
+                padding: 5px;
+                font-size: 15px;
+            }
+            button {
+                background-color: skyblue;
+                width: 15%;
+                font-size: 30px;
+                color: white;
+                border: none;
+            }
+            button:hover {
+                background-color: rgb(150, 150, 255);
+                color: gray;
+            }
+            button:active {
+                background-color: seagreen;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FIND A ROOM</h1>
+
+        <form>
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <label for="phone">Phone*</label>
+            <input type="text" id="phone" name="phone" placeholder="Phone" required>
+            <label for="phone">Check In*</label>
+            <input type="text" id="checkin" name="checkin" placeholder="Time and date" required>
+            <label for="phone">Check Out*</label>
+            <input type="text" id="checkout" name="checkout" placeholder="Time and date" required>
+            <label for="phone">Adults*</label>
+            <input type="text" id="adult" name="adult" placeholder="Number of Adults" required>
+            <label for="phone">Children*</label>
+            <input type="text" id="children" name="children" placeholder="Number of Children" required>
+            <input type="checkbox" id="behave" name="behave">
+            <label for="blank">My children are well behaved.</label>
+        </form>
+        <div class="button">
+            <button>BOOK ROOM</button>
+        </div>
+    </body>
+</html>

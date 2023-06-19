@@ -1,0 +1,23 @@
+<script>
+    function numberRange(givenNumber) {
+        var number = parseInt(givenNumber)
+
+        if (number < 50) {
+            alert("F")
+        }
+        if (number >= 50 && number <= 72) {
+            alert("C")
+        }
+        if (number >= 73 && number < 86) {
+            alert("B")
+        }
+        if (number >= 86) {
+            alert("A")
+        }
+        else {
+            alert("Not a valid input.")
+        }
+    }
+
+    numberRange(86)
+</script>

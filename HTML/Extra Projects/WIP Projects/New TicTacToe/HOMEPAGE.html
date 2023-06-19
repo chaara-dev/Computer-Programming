@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            background-image: url("tictactoe_wallpaper.jpg");
+            background-color: rgba(255, 255, 255, 0.8);
+            background-blend-mode: lighten;
+            background-size: 600px;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        h1 {
+            box-shadow: 3px 3px 10px lightgray;
+            max-width: fit-content;
+            padding: 10px;
+            border: lightgrey solid;
+            user-select: none;
+            background-color: rgba(231, 231, 231, 0.9);
+            border-radius: 20px;
+        }
+
+        .pick-buttons {
+            box-sizing: border-box;
+            background-color: rgb(236, 236, 236);
+            margin: 0;
+            height: 45px;
+            user-select: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .pick-buttons:hover {
+            user-select: none;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <center id="gamemode-pick">
+        <h1>Choose Game Mode</h1>
+        <button id="player-button" class="pick-buttons" onclick="againstHuman()">Multiplayer</button>
+        <button id="robot-button" class="pick-buttons" onclick="againstRobot()">Singleplayer</button>
+    </center>
+
+    <script>
+        function againstHuman() {
+            window.open("tictactoe_multiplayer.html", "_self")
+        }
+        function againstRobot() {
+            alert("Singleplayer is complete, but may have errors.\nCheck with Tyler if something goes wrong.")
+            alert("Also, the bot is incredibly dumb. It has no sense of the game, it just fills in boxes.\n\nDon't complain if it sucks.")
+            window.open("tictactoe_singleplayer.html", "_self")
+        }
+
+        // Create an image element
+        const img = document.createElement("img");
+        img.src = "info-image.png";
+        img.alt = "Image";
+        img.style.position = "absolute";
+        img.style.bottom = "0";
+        img.style.right = "0";
+        img.style.width = "25px";
+        img.style.height = "25px";
+        img.style.opacity = "0.7"
+
+        // Register a click event listener for the image
+        img.addEventListener("click", function () {
+            console.log("This game of TicTacToe was made with the help of:");
+            console.log("Hannah: Who did most of the CSS and a major part of the HTML body.")
+            console.log("Tyler: Who did most of the Javascript, and some HTML and CSS as well.")
+            console.log("ChatGPT: Who was a major help in getting things to work properly")
+            console.log("ChatGPT: " + "https://chat.openai.com/chat")
+        }, { once: true });
+
+        // Add the image to the page
+        document.body.appendChild(img);
+    </script>
+</body>
+
+</html>

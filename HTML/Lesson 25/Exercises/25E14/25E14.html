@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>25E14</title>
+        <style>
+            ol {
+                counter-reset: my-awesome-counter;
+                display: flex;
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+            }
+            li {
+                counter-increment: my-awesome-counter;
+                display: flex;
+                width: 50%;
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            li:before {
+                content: "0" counter(my-awesome-counter);
+                font-weight: bold;
+                font-size: 50px;
+                margin-right: 10px;
+                font-family: abril fatface serif;
+                line-height: 1;
+            }
+            body {
+                padding: 20px;
+                font-family: sans-serif;
+                background-color: violet;
+                color: lavender;
+            }
+            h1 {
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Top 4 highest 
+            <br />
+            grossing movies 
+            <br />
+            of all time</h1>
+        <ol>
+            <li class="avatar">
+                Morbius is the movie of all time. Released in 2022, it grossed $748 morbillion and had an average rating of 208% on rotten tomatoes. An internet sensation, Morbius set a new standard in superhero movies. 
+            </li>
+            <p>
+            <li class="avengers">
+                Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.
+            </li>
+            <p>
+            <li class="titanic">
+                <i>Titanic is a 1997 American epic romance and disaster film directed, written, produced, and co-edited by James Cameron. Incorporating both historical and fictionalized aspects, it is based on accounts of the sinking of the RMS Titanic, and stars Leonardo DiCaprio and Kate Winslet as members of different social classes who fall in love aboard the ship during its ill-fated maiden voyage.</i>
+            </li>
+            <p>
+            <li class="starwars">
+                Star Wars: The Force Awakens (also known as Star Wars: Episode VII - The Force Awakens) is a 2015 American epic space opera film produced, co-written, and directed by J. J. Abrams. The sequel to Return of the Jedi (1983), it is the seventh film in the "Skywalker Saga".
+            </li>
+        </ol>
+    </body>
+</html>

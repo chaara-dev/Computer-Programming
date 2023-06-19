@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>27E17</title>
+        <style>
+            h2 {
+                display: inline;
+            }
+        </style>
+        <script>
+            var x, y;
+            x = 2;
+            y = 3;
+
+            function revealx() {
+                window.alert(x)
+            }
+            function revealy() {
+                window.alert(y)
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Are you good at math?</h1>
+
+        <h2>2x + 3y = </h2> <span id="h21"></span>
+        <br />
+        <h2>7x + 6 = </h2> <span id="h22"></span>
+
+        <br /><br /><br />
+        <h3>What are X and Y?</h3>
+        <button type="button" onclick="revealx()">Show X</button>
+        <button type="button" onclick="revealy()">Show Y</button>
+
+        <script>
+            document.getElementById("h21").innerHTML = 2 * x + 3 * y
+            document.getElementById("h22").innerHTML = 7 * x + 6
+        </script>
+    </body>
+</html>

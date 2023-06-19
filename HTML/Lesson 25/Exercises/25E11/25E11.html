@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>25E11</title>
+        <style>
+            ol {
+                font-size: 21px;
+                counter-reset: section;
+                list-style-type: none;
+            }
+            li:before {
+                font-size: 21px;
+                counter-increment: section;
+                content: counter(section) ".";
+            }
+            .idk {
+                list-style-type: outside;
+            }
+            .idc {
+                list-style-type: inside;
+            }
+        </style>
+    </head>
+    <!--
+        Your instructions make no sense, I did my best.
+    -->
+    <body>
+        <ol>
+            <ul class="idk">
+                <li>list item comes first</li>
+                <li>list item comes second</li>
+                <ul class="idc">
+                    <li>list item comes first</li>
+                    <li>list item comes first</li>
+                </ul>
+            </ul>
+        </ol>
+    </body>
+</html>

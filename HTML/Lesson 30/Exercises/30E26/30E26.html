@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>30E26</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            function replaceFirstAndLast(array = [], string) {
+                var lastItem = array[array.length-1]
+                var firstItem = array[0]
+                var fullArray = array.toString().replace(lastItem, string)
+
+                var arrayBreak = fullArray.split(",")
+
+                var finalArray = arrayBreak.toString().replace(firstItem, string)
+
+
+                console.log(finalArray)
+            }
+
+            replaceFirstAndLast([1, 2, 3, 4, 5], "A")
+        </script>
+    </body>
+</html>

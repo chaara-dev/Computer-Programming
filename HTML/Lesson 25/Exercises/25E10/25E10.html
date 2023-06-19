@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>25E10</title>
+        <style>
+            ol {
+                counter-reset: count lower-alpha;
+            }
+            li {
+                counter-increment: count decimal-leading-zero;
+            }
+            li:after {
+                content: "]==[" counter(count, lower-alpha) "]";
+            }
+            li:before {
+                content: "[ " ;
+            }
+        </style>
+    </head>
+    <body>
+        <ol>
+            <li>
+                01
+            </li>
+            <li>
+                02
+            </li>
+            <li>
+                03
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>30E25</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            var current_date = new Date
+            function verifyPassports([{name, age, country, expiry}]) {
+                if (expiry < current_date) {
+                    return console.log(false)
+                }
+                else {
+                    return console.log(true)
+                }
+            }
+
+            verifyPassports([
+                {name: "Bob", age: 20, country: "CA", expiry: new Date(2022, 9, 31)},
+                {name: "Alice", age: 21, country: "FL", expiry: new Date("2090-03-10")}
+            ])
+            
+            console.log("Current Date: " + current_date)
+        </script>
+    </body>
+</html>

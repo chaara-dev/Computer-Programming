@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>30E09</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2 id="demo"></h2>
+
+        <script>
+            var numbers = [47.5, 7, 9, 18, 32.5];
+            var allOver18 = numbers.every(myFunction);
+
+            function myFunction(value, index, array) {
+                return value > 18
+            }
+
+            document.getElementById("demo").innerHTML = allOver18
+        </script>
+    </body>
+</html>

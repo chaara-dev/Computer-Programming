@@ -1,0 +1,14 @@
+<h2 id="demo"></h2>
+
+<script>
+    errElements = [63, 8, 19, 23, 49]
+    txt = ""
+
+    errElements.forEach(divide)
+    
+    function divide(num) {
+        txt = txt + " | " + num / 2 + " | "
+    }
+
+    document.getElementById("demo").innerHTML = txt
+</script>

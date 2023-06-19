@@ -1,0 +1,13 @@
+<script>
+    var arr = []
+
+    function objTypes(obj) {
+        for (x in obj) {
+            arr[x] = typeof obj[x]
+            x++
+        }
+        console.log(Object.assign({}, arr))
+    }
+
+    objTypes({a:1, b: true, cde: "a", f: null, gh: undefined})
+</script>

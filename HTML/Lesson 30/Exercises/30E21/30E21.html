@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>30E21</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            var numbers = [1, 2, 3, 4, 5, 61, 66, 300, 405, 341, 22, 244];
+
+            function filterEven() {
+                var even = numbers.filter(number => {
+                return number % 2 == 0;
+                });
+                even.sort((a, b) => a - b)
+
+                console.log(even)
+            }
+            
+            function filterOdd() {
+                var odd = numbers.filter(number => {
+                return number % 2 != 0;
+                });
+                odd.sort((a, b) => a - b)
+
+                console.log(odd)
+            }
+            
+            filterEven();
+
+            filterOdd();
+        </script>
+    </body>
+</html>

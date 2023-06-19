@@ -1,0 +1,132 @@
+<script>
+    class Movable {
+        constructor(xPos, yPos) {
+            this._xPos = xPos
+            this._yPos = yPos
+            this._directionList = ["up", "right", "down", "left"]
+            this._directionCount = 0
+            this.finalDirection = this._directionList[this._directionCount]
+        }
+
+        get xPosition() {
+            console.log(this._xPos)
+        }
+        get yPosition() {
+            console.log(this._yPos)
+        }
+
+
+        get direction() {
+            console.log("You are facing: " + this.finalDirection)
+        }
+
+        turnLeft() {
+            if (this._directionCount == 0) {
+                this.finalDirection = "left"
+            }else {
+                this.finalDirection = this._directionList[this._directionCount - 1]
+            }
+
+            console.log("turned left!")
+        }
+        turnRight() {
+            if (this._directionCount == 3) {
+                this.finalDirection = "up"
+            }else {
+                this.finalDirection = this._directionList[this._directionCount + 1]
+            }
+
+            console.log("turned right!")
+        }
+
+
+        set xPosition(newNumber) {
+            if (isNaN(newNumber) == false) {
+                this._xPos = newNumber
+                console.log("set!")
+            }else {
+                throw "error. Invalid Input."
+            }
+        }
+        set yPosition(newNumber) {
+            if (isNaN(newNumber) == false) {
+                this._yPos = newNumber
+                console.log("set!")
+            }else {
+                throw "error. Invalid Input"
+            }
+        }
+
+        forward(byHowMuch = 1) {
+            if (this.finalDirection == "up") {
+                this._yPos += byHowMuch
+            }else if (this.finalDirection == "right") {
+                this._xPos += byHowMuch
+            }else if (this.finalDirection == "down") {
+                this._yPos -= byHowMuch
+            }else if (this.finalDirection == "left") {
+                this._xPos -= byHowMuch
+            }
+            console.log("forward! :" + byHowMuch)
+        }
+        backward(byHowMuch = 1) {
+            if (this.finalDirection == "up") {
+                this._yPos -= byHowMuch
+            }else if (this.finalDirection == "right") {
+                this._xPos -= byHowMuch
+            }else if (this.finalDirection == "down") {
+                this._yPos += byHowMuch
+            }else if (this.finalDirection == "left") {
+                this._xPos += byHowMuch
+            }
+            console.log("backward! :" + byHowMuch)
+        }
+
+        toString() {
+            console.log("[" + this._xPos + ", " + this._yPos + "]")
+        }
+    }
+
+
+    const m = new Movable(0, 0)
+
+    function parseString(str) {
+        var newArray = []
+        var arr = str.split("\n")
+
+        for (i in arr) {
+            if (arr[i] == "trR") {
+                m.turnRight()
+            }else if (arr[i] == "trL") {
+                m.turnLeft()
+            }else {
+                newArray = arr[i] + ","
+                newArray.split(",").pop()
+                var abc = newArray.split(" ")
+
+                if (abc[0] == "fwd") {
+                    if (isNaN(abc[1]) == false) {
+                        Number(abc[1])
+                        byHowMuch2 = abc[1]
+                        m.forward(byHowMuch2)
+                    }else {
+                        m.forward()
+                    }
+                }else if (abc[0] == "bwd") {
+                    if (Number(abc[1]) == false) {
+                        Number(abc[1])
+                        byhowMuch3 = abc[1]
+                        m.backward(byhowMuch3)
+                    }else {
+                        m.backward()
+                    }
+                }
+            }
+        }
+        m.toString()
+    }
+
+    parseString("fwd\nbwd 2\ntrR\nfwd 3\ntrL\nbwd")
+
+    // Best I could get it.
+</script>

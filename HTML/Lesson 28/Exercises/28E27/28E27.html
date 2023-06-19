@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>28E27</title>
+        <style>
+            h1 {
+                text-align: center;
+                font-weight: bold;
+                font-size: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="numbers">0</h1>
+        <script>
+            var x = 0;
+            let counter = window.setInterval(function upbyone() {
+                x = x + 1;
+                console.log(x)
+                document.getElementById("numbers").innerHTML = x;
+                if (x > 99) {
+                    clearInterval(counter)
+                }
+            }, 750);
+        </script>
+    </body>
+</html>

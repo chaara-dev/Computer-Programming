@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>30A16</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>Javascript Array.reduce()</h2>
+        <p>This example finds the sum of all the numbers in an array.</p>
+
+        <p id="demo"></p>
+
+        <script>
+            var numbers = [45, 4, 9, 15, 25];
+            var sum = numbers.reduce(myFunction);
+
+            document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+            function myFunction(total, value, index, array) {
+                return total + value
+            }
+        </script>
+    </body>
+</html>

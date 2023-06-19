@@ -1,0 +1,24 @@
+<script>
+    function viewFloor(floorNumber) {
+        var floor1Arr = ["Grand Commons", "Office", "Entrance"]
+        var floor1_5Arr = ["Library"]
+        var floor2Arr = ["Classrooms", "Breakout Rooms"]
+        var floor3Arr = ["Classrooms", "Breakout Rooms", "Bees"]
+        var basement = "THE NWSS BASEMENT DOES NOT EXIST. IGNORE ANYONE WHO SAYS OTHERWISE."
+        if (floorNumber == 1) {
+            return floor1Arr
+        }if (floorNumber == 1.5) {
+            return floor1_5Arr
+        }if (floorNumber == 2) {
+            return floor2Arr
+        }if (floorNumber == 3) {
+            return floor3Arr
+        }if (floorNumber == "B" || floorNumber == "b") {
+            return basement
+        }else {
+            return "Floor " + floorNumber + " is not a valid floor"
+        }
+    }
+
+    console.log(viewFloor(3))
+</script>

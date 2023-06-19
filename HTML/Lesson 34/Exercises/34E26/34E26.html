@@ -1,0 +1,70 @@
+<script>
+    class Paper {
+        constructor(string) {
+            this._string = string
+        }
+
+        read() {
+            console.log(this._string)
+        }
+
+        erase() {
+            this._string = ""
+            console.log("*eraser noises*")
+        }
+
+        fold() {
+            this._string = this._string.slice(0, (this._string.length / 2))
+            console.log(this._string)
+        }
+
+        write(newString) {
+            this._string = newString
+            console.log("*pencil noises*")
+        }
+    }
+
+    class Printer {
+        constructor(name, model, paperCount) {
+            this._name = name
+            this._model = model
+            this._paperCount = Number(paperCount)
+        }
+
+        addPaper(howMuch) {
+            this._paperCount += howMuch
+        }
+
+        print(str) {
+            if (this._paperCount < 0) {
+                throw "error. No paper."
+            }else {
+                this.paperCount - 1
+    
+                console.log(new Paper(str))
+            }
+        }
+
+        toString() {
+            console.log(this._name + ", " + this._model)
+        }
+
+    }
+
+
+    const notepad = new Paper("this is a test")
+
+    notepad.read()
+    notepad.erase()
+    notepad.read()
+    notepad.write("This is another test")
+    notepad.read()
+    notepad.fold()
+
+    console.log("----------------------------------------------------")
+
+    const myPrinter = new Printer("Tyler's Printer", "Super Model", 0)
+
+    myPrinter.print("Test")
+    myPrinter.print("abc")
+</script>

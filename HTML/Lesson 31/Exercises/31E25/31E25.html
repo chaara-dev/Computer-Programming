@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>31E25</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            function randomTimeToday() {
+                var d_date = new Date()
+
+                d_date.setHours((Math.random()) * 10)
+                d_date.setMinutes((Math.random()) * 10)
+                d_date.setSeconds((Math.random()) * 10)
+
+                alert(d_date)
+            }
+        
+            randomTimeToday()
+        </script>
+    </body>
+</html>

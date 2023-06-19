@@ -1,0 +1,38 @@
+<script>
+    class TextEffect {
+        constructor(func) {
+            this._func = func;
+        }
+        apply(str) {
+            return this._func(str);
+        }
+    }
+
+    class TextSegment {
+        constructor(str, effect) {
+            this._str = str;
+            this._effect = effect;
+        }
+        toString() {
+            if (this._effect !== undefined) return this._effect.apply(this._str);
+            return this._str;
+        }
+    }
+
+    class Text {
+        constructor(arr) {
+            this._arr = arr;
+        }
+        toString() {
+            return this._arr
+                .map(x =>
+                    typeof x === "string"
+                        ? x
+                        : x instanceof TextSegment
+                            ? x.toString()
+                            : ""
+                )
+                .join("");
+        }
+    }
+</script>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>27E26</title>
+        <style>
+            
+        </style>
+        <script>
+            var opacity;
+            opacity = 1.0
+        </script>
+    </head>
+    <body>
+        <h1 id="h1">Opacity Changer</h1>
+        <br />
+        <button type="button" onclick="increase()">Increase</button>
+        <button type="button" onclick="decrease()">Decrease</button>
+
+        <script>
+            document.getElementById("h1").style.opacity = opacity
+
+            function increase() {
+                opacity += 0.1
+                document.getElementById("h1").style.opacity = opacity
+            }
+            function decrease() {
+                opacity -= 0.1
+                document.getElementById("h1").style.opacity = opacity
+            }
+        </script>
+    </body>
+</html>

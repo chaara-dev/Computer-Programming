@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>26E21</title>
+        <style>
+            #h1 {
+                position: absolute;
+                top: 100px;
+            }
+        </style>
+        <script>
+            function left() {
+                document.getElementById("h1").style.right = "0";
+            }
+            function right() {
+                document.getElementById("h1").style.left = "0";
+            }
+            function center() {
+                document.getElementById("h1").style.textAlign = "center";
+            }
+            function show() {
+                document.getElementById("h1").style.visibility = "visible";
+            }
+            function hide() {
+                document.getElementById("h2").style.visibility = "hidden";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="h1">Interactive Webpage</h1>
+        <button onclick="left()">Left</button>
+        <button onclick="right()">Right</button>
+        <button onclick="center()">Center</button>
+        <button onclick="show()">Show</button>
+        <button onclick="hide()">Hide</button>
+    </body>
+</html>

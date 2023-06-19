@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>30E17</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2 id="demo"></h2>
+        <script>
+            var numbers = [3, 4, 5, 2, 21, 32];
+            var sum = numbers.reduce(myFunction);
+
+            document.getElementById("demo").innerHTML = sum;
+
+            function myFunction(total, value, index, array) {
+                return total + value
+            }
+        </script>
+    </body>
+</html>

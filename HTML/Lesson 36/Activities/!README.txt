@@ -1,0 +1,1 @@
+There are no exercises in Leson 36 of web development.

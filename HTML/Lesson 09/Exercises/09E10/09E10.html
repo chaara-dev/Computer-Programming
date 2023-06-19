@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>09E10</title>
+        <style>
+            #dhtml {
+                position: absolute;
+                top: 100px;
+                left: 450px;
+                font-size: 40pt;
+            }
+            #answeryes {
+                position: absolute;
+                top: 200px;
+                left: 600px;
+                visibility: hidden;
+            }
+            #answerno {
+                position: absolute;
+                top: 200px;
+                left: 600px;
+                visibility: hidden;
+            }
+            #yesbutton {
+                position: absolute;
+                top: 400px;
+                left: 400px;
+                color: red;
+            }
+            #nobutton {
+                position: absolute;
+                top: 400px;
+                left: 800px;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dhtml">
+            Do you like DTHML?
+        </div>
+
+        <div id="answeryes">
+            Hurray, that makes me happy!
+        </div>
+
+        <div id="answerno">
+            Get yourself outta here!
+        </div>
+
+        <div id="yesbutton" onclick="document.getElementById('answeryes').style.visibility='visible'; document.getElementById('answerno').style.visibility='hidden';">
+            Click here if you love it!
+        </div>
+
+        <div id="nobutton" onclick="document.getElementById('answerno').style.visibility='visible'; document.getElementById('answeryes').style.visibility='hidden';">
+            Click here if you hate it!
+        </div>
+    </body>
+</html>

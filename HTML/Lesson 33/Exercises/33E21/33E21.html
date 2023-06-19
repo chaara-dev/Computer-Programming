@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>33E21</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        
+
+        <script>
+            var test = []
+            function turnAintoB(arr) {
+                for (x in arr) {
+                    if (typeof arr[x] != "string") {
+                        throw "Invalid Input"
+                    }else {
+                        test += arr[x].replace(/a/gi, "b") + ","
+                    }
+                }
+                console.log(Array.from(test.split(",")).slice(0, -1))
+            }
+
+            turnAintoB(["a", "m", "bat", "cat"])
+        </script>
+    </body>
+</html>

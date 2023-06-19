@@ -1,0 +1,65 @@
+<script>
+    class Dice {
+        constructor(sides) {
+            if (sides >= 2) {
+                this._sides = sides
+            }else {
+                throw "error. Input too small and/or Input not a number"
+            }
+            this.rollHistory = []
+            this.resetHistory = ["empty", "empty", "empty"]
+            this.actualArr = []
+        }
+
+        
+
+        roll() {
+            this.rollHistory += [this.diceRoll = (Math.floor(Math.random() * this._sides - 1 + 1) + 1) + ","]
+
+            console.log(this.diceRoll.slice(0, -1))
+        }
+
+        history() {
+            var arr = [this.rollHistory]
+            this.actualArr = arr[0].split(",")
+            this.actualArr.pop()
+            console.log(this.actualArr)
+        }
+
+        clearHistory() {
+            // CLEAR HISTORY
+            console.log("cleared!")
+        }
+
+
+        get shape() {
+            if (this._sides == 2) {
+                console.log("Coin")
+            }else if (this._sides == 4) {
+                console.log("Tetrahedron")
+            }else if (this._sides == 8) {
+                console.log("Octahedron")
+            }else if (this._sides == 12) {
+                console.log("Dodecahedron")   
+            }else if (this._sides == 20) {
+                console.log("Icosahedron")
+            }else if (this._sides >= 1000) {
+                console.log("Sphere")
+            }else {
+                console.log("Unknown")
+            }
+        }
+    }
+
+    const dodecahedron = new Dice(12)
+
+
+    dodecahedron.roll()
+    dodecahedron.history()
+    dodecahedron.roll()
+    dodecahedron.history()
+    dodecahedron.roll()
+
+    dodecahedron.clearHistory()
+    dodecahedron.history()
+</script>

@@ -1,0 +1,68 @@
+<script>
+    class MathN {
+        constructor(number) {
+            if (isNaN(number) != true) {
+                this._number = number
+            }else {
+                throw "error."
+            }
+        }
+        
+        add(newNumber) {
+            if (isNaN(newNumber) != true) {
+                const newMath = new MathN(this._number + newNumber)
+                return newMath
+            }else {
+                throw "error"
+            }
+        }
+
+        subtract(newNumber) {
+            if (isNaN(newNumber) != true) {
+                const newMath = new MathN(this._number - newNumber)
+                return newMath
+            }else {
+                throw "error"
+            }
+        }
+
+        multiply(newNumber) {
+            if (isNaN(newNumber) != true) {
+                const newMath = new MathN(this._number * newNumber)
+                return newMath
+            }else {
+                throw "error"
+            }
+        }
+
+        divide(newNumber) {
+            if (isNaN(newNumber) != true) {
+                const newMath = new MathN(this._number / newNumber)
+                return newMath
+            }else {
+                throw "error"
+            }
+        }
+
+        get squareRoot() {
+            return new MathN(Math.sqrt(this._number))
+        }
+        
+        get result() {
+            return this._number
+        }
+    }
+
+    const toN = (num) => {return new MathN(num)};
+
+
+    const test = new MathN(3)
+
+    console.log(test.add(3))
+    console.log(test.subtract(3))
+    console.log(test.multiply(3))
+    console.log(test.divide(3))
+    console.log(test.squareRoot)
+    console.log(test.result)
+    console.log(toN(99))
+</script>

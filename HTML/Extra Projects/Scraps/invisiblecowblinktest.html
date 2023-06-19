@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Invisible Cow</title>
+        <script src="https://randojs.com/1.0.0.js"></script>
+        <style>
+            #cow {
+                z-index: 1;
+                width: 150px;
+                height: 170px;
+                position: sticky;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #intro {
+                z-index: 5;
+                text-align: center;
+                font-size: 20pt;
+                font-family: monospace;
+            }
+            #instructions {
+                z-index: 5;
+                text-align: center;
+                font-size: 10pt;
+                font-family: monospace;
+            }
+            h2{
+color: green;
+}
+.a1, .a2{
+animation:blinking 1.5s infinite;
+font-size: 20px;
+}
+@keyframes blinking{
+0%{   color: red;   }
+47%{   color: #000; }
+62%{   color: transparent; }
+97%{   color:transparent; }
+100%{  color: #000;   }
+}
+        </style>
+    </head>
+    <body>
+        <div id="intro">
+            <b>Invisible Cow Game</b>
+        </div>
+        <div id="instructions">
+            The game is simple. Double click the cow to hide it, and click it again to reveal it.
+            <br />
+            Careful! The cow is sneaky, and occasionally hides behind the text and the edges of the screen.
+        </div>
+        <div id="cow" 
+        ondblclick=
+           "document.getElementById('cow').style.opacity='0.07';
+            document.getElementById('cow').style.top = rando(0,innerHeight);
+            document.getElementById('cow').style.left = rando(0, innerWidth);" 
+        onclick=
+           "document.getElementById('cow').style.opacity='1';">
+                <img src="cow.jpg">
+        </div>
+    </body>
+</html>

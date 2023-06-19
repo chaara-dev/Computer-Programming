@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>22A05a</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .box {
+                float: left;
+                width: 50%;
+                padding: 50px;
+                height: 300px;
+            }
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Floating boxes with equal heights:</p>
+        <div class="clearfix">
+            <div class="box" style="background-color: #bbb;">
+                <h2>Box 1</h2>
+                <p>
+                    The pineapple is a tropical plant with an edible fruit, also called a pineapple, and the most economically significant plant in the family Bromeliaceae.
+                </p>
+            </div>
+            <div class="box" style="background-color: #ccc;">
+            <h2>Box 2</h2>
+            <p>
+                in 20C, Hawaii was a dominant producer of pineapples, especially for the US, but in 2016, Costa Rica, Brazil, and the Philippines accounted for nearly one-third of the world's production of pineapples.
+            </p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<script>
+    function objInfo(obj) {
+        
+        var keysArr = Object.keys(obj)
+        var valuesArr = Object.values(obj)
+
+        var newObj = {keys: keysArr, values: valuesArr}
+
+        if (Array.isArray(obj) == true) {
+            console.log("Error: Input was Array.")
+        }else {
+            console.log(newObj)
+        }
+    }
+
+    objInfo({this:"Tyler", is:"is", a:16, test:"and cool"})
+    objInfo([1, 2, 3, 4])
+</script>

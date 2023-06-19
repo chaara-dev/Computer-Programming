@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>30A17</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>JavaScript new Date()</h2>
+        <p>6 numbers specify year, month, day, hour, minute and second (in that order).</p>
+        <p>5 numbers specify year, month, day, hour and minute.</p>
+        <p>4 numbers specify year, month, day and hour.</p>
+        <p>3 numbers specify year, month and day.</p>
+        <p>2 numbers specify year and month.</p>
+        <p>Date() uses the 24 hour format for the time, and the months count starting from 0.</p>
+
+        <br />
+        
+        <p id="demo"></p>
+
+        <script>
+            var d = new Date(2018, 11, 24, 10, 33, 30)
+            document.getElementById("demo").innerHTML = d;
+        </script>
+    </body>
+</html>

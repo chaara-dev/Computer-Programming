@@ -1,0 +1,271 @@
+<html>
+    <head>
+        <title>11E07</title>
+        <style>
+            body {
+                background-color: white;
+            }
+            #line1 {
+                font-family: Cambria;
+                font-size: 40px;
+                color: red;
+            }
+            #line2 {
+                font-family: Cambria;
+                font-size: 30px;
+                color: blue;
+            }
+            #line3 {
+                font-family: Cambria;
+                font-size: 20px;
+                color: yellow;
+            }
+            #line4 {
+                position: absolute;
+                visibility: hidden;
+            }
+            #line5 {
+                position: absolute;
+                visibility: hidden;
+            }
+            #button {
+                position: absolute;
+            }
+            #titlebutton {
+                position: absolute;
+                visibility: hidden;
+                top: 10px;
+                left: 400px;
+            }
+            #backgroundbutton {
+                position: absolute;
+                visibility: hidden;
+                top: 10px;
+                left: 460px;
+            }
+        </style>
+        <script>
+            function screenwipe() {
+                document.getElementById("body").style.backgroundColor = "black";
+
+                document.getElementById("line1").style.position = "absolute"
+                document.getElementById("line1").style.top = "10px";
+                document.getElementById("line1").style.fontFamily = "arial";
+                document.getElementById("line1").style.fontSize = "15px";
+                document.getElementById("line1").style.color = "white";
+                document.getElementById("line1").innerHTML = "What have you done? You've erased my beautiful website!";
+
+                document.getElementById("line2").style.position = "absolute"
+                document.getElementById("line2").style.top = "300px"
+                document.getElementById("line2").style.fontFamily = "arial"
+                document.getElementById("line2").style.fontSize = "15px"
+                document.getElementById("line2").style.color = "white"
+                document.getElementById("line2").innerHTML = "What am I going to do? I have seven children to feed!"
+
+                document.getElementById("line3").style.position = "absolute";
+                document.getElementById("line3").style.bottom = "75px";
+                document.getElementById("line3").style.fontFamily = "arial";
+                document.getElementById("line3").style.fontSize = "15px";
+                document.getElementById("line3").style.color = "white";
+                document.getElementById("line3").innerHTML = "You're gonna have to help me make a new website"
+
+                document.getElementById("buttontext").innerHTML = "Click me to help make a new website";
+
+                document.getElementById("button").style.bottom = "50px";
+                document.getElementById("button").setAttribute( "onclick", "reload()" );
+            }
+
+
+            function reload() {
+                document.getElementById("line1").innerHTML = "Ok, this is a blank page. What are we gonna put on here?";
+                document.getElementById("line1").style.color = "black";
+
+                document.getElementById("line2").style.visibility = "hidden";
+
+                document.getElementById("line3").style.visibility = "hidden";
+
+                document.getElementById("body").style.backgroundColor = "white";
+
+                document.getElementById("button").style.visibility = "hidden";
+
+                document.getElementById("titlebutton").style.visibility = "visible";
+
+                document.getElementById("backgroundbutton").style.visibility = "visible";
+            }
+
+            function loadtitle() {
+                document.getElementById("line3").style.visibility = "visible";
+                document.getElementById("line3").style.color = "black";
+                document.getElementById("line3").innerHTML = "Why JavaScript is Great";
+                document.getElementById("line3").style.top = "10px";
+                document.getElementById("line3").style.left = "460px";
+                document.getElementById("line3").style.fontSize = "30pt";
+                document.getElementById("line3").style.fontWeight = "bold";
+                document.getElementById("line3").style.fontFamily = "Times New Roman";
+
+                document.getElementById("line1").style.position = "absolute";
+                document.getElementById("line1").style.top = "70px";
+                document.getElementById("line1").innerHTML = "Ok, we have our title";
+                document.getElementById("line1").style.left = "1px";
+
+                document.getElementById("backgroundbutton").style.visibility = "hidden";
+
+                document.getElementById("titlebutton").style.position = "absolute";
+                document.getElementById("titlebutton").style.top = "90px";
+                document.getElementById("titlebutton").style.left = "1px";
+                document.getElementById("titlebutton").setAttribute( "onclick", "explaintitle()");
+
+                document.getElementById("titlebuttontext").innerHTML = "Now What?";
+            }
+
+            function explaintitle() {
+                document.getElementById("backgroundbutton").style.visibility = "visible";
+                document.getElementById("backgroundbutton").style.top = "320px";
+                document.getElementById("backgroundbutton").style.left = "5px";
+                document.getElementById("backgroundbutton").setAttribute( "onclick", "explanationtitle()");
+
+                document.getElementById("backgroundbuttontext").innerHTML = "Ok";
+
+                document.getElementById("line2").innerHTML = "Might as well explain why JavaScript is so nice";
+                document.getElementById("line2").style.visibility = "visible";
+                document.getElementById("line2").style.color = "black";
+
+                document.getElementById("titlebutton").style.visibility = "hidden";
+            }
+
+            function explanationtitle() {
+                document.getElementById("line2").innerHTML = "Javascript is a wonderful tool you can use to make your webpages more dynamic and interesting for the viewer. However, proper understanding of the mechanics is imperative to proper usage of such a powerful tool";
+                
+                document.getElementById("buttontext").innerHTML = "Very nice, keep going...";
+
+                document.getElementById("backgroundbutton").style.visibility = "hidden";
+
+                document.getElementById("button").style.visibility = "visible";
+                document.getElementById("button").style.top = "450px";
+                document.getElementById("button").style.left = "5px";
+                document.getElementById("button").setAttribute( "onclick", "explanationtitle2()");
+                document.getElementById("button").style.height = "23px";
+            }
+
+            function explanationtitle2() {
+                document.getElementById("line4").style.visibility = "visible";
+                document.getElementById("line4").innerHTML = "Javascript can compliment your webpage's designs when used correctly. Therefore, it is important to make sure you fully understand the concept of Javascript before attempting anything crazy with it."
+                document.getElementById("line4").style.top = "500px";
+                document.getElementById("line4").style.left = "5px";
+
+                document.getElementById("backgroundbutton").style.visibility = "visible";
+                document.getElementById("backgroundbutton").style.top = "525px";
+                document.getElementById("backgroundbutton").style.left = "5px";
+                document.getElementById("backgroundbutton").setAttribute("onclick", "finished()")
+
+                document.getElementById("backgroundbuttontext").innerHTML = "Looks Good!";
+
+                document.getElementById("button").style.visibility = "hidden";
+            }
+
+            function finished() {
+                document.getElementById("backgroundbutton").style.visibility = "hidden";
+
+                document.getElementById("line5").style.visibility = "visible";
+                document.getElementById("line5").style.top = "600px";
+                document.getElementById("line5").style.left = "5px";
+                document.getElementById("line5").innerHTML = "Thanks for your hard work. I like this webpage."
+
+                document.getElementById("line1").style.visibility = "hidden";
+            }
+
+            //Linebreak//                   
+
+            function loadbackground() {
+                document.getElementById("titlebutton").style.visibility = "hidden";
+
+                document.getElementById("backgroundbutton").innerHTML = "Now what?";
+                document.getElementById("backgroundbutton").style.top = "35px";
+                document.getElementById("backgroundbutton").style.left = "5px";
+                document.getElementById("backgroundbutton").setAttribute( "onclick", "explainbackground()")
+
+                document.getElementById("line1").innerHTML = "Ok, now there's a nice background.";
+                document.getElementById("line1").style.color = "white";
+
+                document.getElementById("body").style.backgroundImage = "url(bg3.jfif)";
+            }
+
+            function explainbackground() {
+                document.getElementById("backgroundbutton").style.visibility = "hidden";
+
+                document.getElementById("line2").style.visibility = "visible";
+                document.getElementById("line2").innerHTML = "Might as well explain why Javascript is so nice."
+
+                document.getElementById("button").style.visibility = "visible";
+                document.getElementById("button").style.top = "325px";
+                document.getElementById("button").setAttribute( "onclick", "explanationbackground()");
+                document.getElementById("button").style.height = "23px";
+
+                document.getElementById("buttontext").innerHTML = "Ok";
+            }
+
+            function explanationbackground() {
+                document.getElementById("line2").innerHTML = "Javascript is a wonderful tool you can use to make your webpages more dynamic and interesting for the viewer. However, proper understanding of the mechanics is imperative to proper usage of such a powerful tool";
+
+                document.getElementById("buttontext").innerHTML = "Very nice, keep going...";
+
+                document.getElementById("button").style.top = "350px";
+                document.getElementById("button").setAttribute( "onclick", "explanationbackground2()");
+            }
+
+            function explanationbackground2() {
+                document.getElementById("button").style.visibility = "hidden";
+                
+                document.getElementById("line4").style.visibility = "visible";
+                document.getElementById("line4").innerHTML = "Javascript can compliment your webpage's designs when used correctly. Therefore, it is important to make sure you fully understand the concept of Javascript before attempting anything crazy with it."
+                document.getElementById("line4").style.top = "500px";
+                document.getElementById("line4").style.left = "5px";
+                document.getElementById("line4").style.color = "white";
+
+                document.getElementById("backgroundbutton").style.visibility = "visible";
+                document.getElementById("backgroundbutton").style.top = "525px";
+                document.getElementById("backgroundbutton").style.left = "5px";
+                document.getElementById("backgroundbutton").setAttribute( "onclick", "finished2()")
+
+                document.getElementById("backgroundbuttontext").innerHTML = "Looks Good!";
+            }
+
+            function finished2() {
+                document.getElementById("backgroundbutton").style.visibility = "hidden";
+
+                document.getElementById("line5").style.visibility = "visible";
+                document.getElementById("line5").style.top = "600px";
+                document.getElementById("line5").style.left = "5px";
+                document.getElementById("line5").style.color = "white";
+                document.getElementById("line5").innerHTML = "Thanks for your hard work. I like this webpage."
+
+                document.getElementById("line1").style.visibility = "hidden";
+            }
+        </script>
+    </head>
+    <body id="body">
+        <span id="line1">Oh man I sure love JavaScript</span>
+        <br />
+        <span id="line2">JavaScript is my favorite thing in the world</span>
+        <br />
+        <span id="line3">What would I do without JavaScript?</span>
+        <br />
+        <span id="line4">This is line 4.</span>
+        <br />
+        <span id="line5">This is line 5.</span>
+
+        <p>
+
+        <button type="button" onclick="screenwipe();" id="button">
+            <span id="buttontext">Click me to find out what I would do without JavaScript!</span>
+        </button>
+
+        <button type="button" onclick="loadtitle()" id="titlebutton">
+            <span id="titlebuttontext">A title</span>
+        </button>
+
+        <button type="button" onclick="loadbackground()" id="backgroundbutton">
+            <span id="backgroundbuttontext">A nice background</span>
+        </button>
+    </body>
+</html>

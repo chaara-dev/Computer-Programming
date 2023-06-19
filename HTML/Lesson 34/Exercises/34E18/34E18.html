@@ -1,0 +1,14 @@
+<script>
+    class Polygon {
+        constructor(arr) {
+            this.shape = arr.reduce((a, b) => a + b, 0)
+        }
+        perimeter(x) {
+            return x + this.shape
+        }
+    }
+
+    newShape = new Polygon([12, 35, 66, 8])
+
+    console.log(newShape.perimeter("Polygon perimeter is: "))
+</script>

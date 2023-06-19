@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>32E21</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <span><b>a: </b></span>
+            <span id="a"></span>
+            <br />
+        <span><b>b: </b></span>
+            <span id="b"></span>
+            <br />
+        <span><b>cde: </b></span>
+            <span id="cde"></span>
+            <br />
+        <span><b>f: </b></span>
+            <span id="f"></span>
+            <br />
+        <span><b>gh: </b></span>
+            <span id="gh"></span>
+            <br />
+
+
+
+        <script>
+            var obj = {a:1, b: true, cde: "a", f: null, gh: undefined}
+
+            function displayValues(obj) {
+                if (obj.f === null) {
+                    obj.f = "null"
+                }
+                document.getElementById("a").innerHTML = obj.a
+                document.getElementById("b").innerHTML = obj.b
+                document.getElementById("cde").innerHTML = obj.cde
+                document.getElementById("f").innerHTML = obj.f
+                document.getElementById("gh").innerHTML = obj.gh
+            }
+
+            displayValues(obj)
+        </script>
+    </body>
+</html>

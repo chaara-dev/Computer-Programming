@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>29E21</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1 id="demo"></h1>
+
+        <script>
+            function extract(str) {
+                var firstBracket = str.indexOf("(") + 1
+                var secondBracket = str.indexOf(")")
+
+                return str.slice(firstBracket, secondBracket)
+            }
+
+            document.getElementById("demo").innerHTML = extract("abcdefghijklm(no)pqrstuvwxyz")
+        </script>
+    </body>
+</html>

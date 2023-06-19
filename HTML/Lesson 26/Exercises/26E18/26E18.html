@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>26E18</title>
+        <style>
+            #b1, #b2, #b3, #b4 {
+                visibility: hidden;
+            }
+            #p1, #p2, #p3, #p4 {
+                visibility: hidden;
+            }
+        </style>
+        <script>
+            function showschedule() {
+                document.getElementById("b1").style.visibility = "visible"
+                document.getElementById("b2").style.visibility = "visible"
+                document.getElementById("b3").style.visibility = "visible"
+                document.getElementById("b4").style.visibility = "visible"
+            }
+            function showablock() {
+                document.getElementById("p1").style.visibility = "visible"
+            }
+            function showbblock() {
+                document.getElementById("p2").style.visibility = "visible"
+            }
+            function showcblock() {
+                document.getElementById("p3").style.visibility = "visible"
+            }
+            function showdblock() {
+                document.getElementById("p4").style.visibility = "visible"
+            }
+        </script>
+    </head>
+    <body>
+        <h1>NWSS Schedule</h1>
+        <button onclick="showschedule()">Show me my schedule</button>
+        <br /><br /><br />
+        <button onclick="showablock()" id="b1">A Block</button>
+        <button onclick="showbblock()" id="b2">B Block</button>
+        <button onclick="showcblock()" id="b3">C Block</button>
+        <button onclick="showdblock()" id="b4">D Block</button>
+        <br /><br /><br />
+        <p id="p1">
+            <b>Subject:</b> Advanced Dramatic Arts
+            <br />
+            <b>Room:</b> 10576
+            <br />
+            <b>Teacher:</b> Mr. Astley
+        </p>
+        <p id="p2">
+            <b>Subject:</b> Mind Reading 101
+            <br />
+            <b>Room:</b> Figure it out
+            <br />
+            <b>Teacher:</b> Unknown
+        </p>
+        <p id="p3">
+            <b>Subject:</b> Study Block
+            <br />
+            <b>Room:</b> Library
+            <br />
+            <b>Teacher:</b> N/A
+        </p>
+        <p id="p4">
+            <b>Subject:</b> Drag Racing
+            <br />
+            <b>Room:</b> Gym
+            <br />
+            <b>Teacher:</b> Mr. McQueen
+        </p>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+print("Good for you!")

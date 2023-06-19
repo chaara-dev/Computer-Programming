@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>27E24</title>
+    </head>
+    <body>
+        <p>
+            <span id="number1"></span> bottles of JS on the wall, <span id="number2"></span> bottles of JS.
+            <br />
+            <button type="button" onclick="takeonedown()">Take one down, pass it around</button>
+        </p>
+        
+        <script>
+            var x, y;
+            x = 99;
+            y = 99;
+
+            document.getElementById("number1").innerHTML = x
+            document.getElementById("number2").innerHTML = y
+
+            function takeonedown() {
+                --x
+                --y
+            document.getElementById("number1").innerHTML = x
+            document.getElementById("number2").innerHTML = y
+            }
+        </script>
+    </body>
+</html>

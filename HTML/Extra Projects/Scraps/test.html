@@ -1,0 +1,14 @@
+<html>
+    <script>
+        $("div[contenteditable='true'][maxlength]").on('keydown paste', function (event) {
+     var cntMaxLength = parseInt($(this).attr('maxlength'));
+
+     if ($(this).text().length === cntMaxLength && event.keyCode != 8) {
+         event.preventDefault();
+     }
+    });
+    </script>
+    <div id="IIYBAGWNBC" contenteditable="true" maxlength="500">
+        This is a test
+    </div>
+</html>

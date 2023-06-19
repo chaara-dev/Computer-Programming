@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>30E28</title>
+        <style>
+            body {
+                text-align: center;
+                font-size: 45px;
+            }
+            li {
+                font-weight: bold;
+                list-style: none;
+            }
+            span {
+                font-weight: normal;
+            }
+            #results {
+                font-size: 75px;
+                font-weight: bold;
+                text-shadow: 5px 2px gray;
+            }
+        </style>
+    </head>
+    <body>
+        <ul><span id="results">RESULTS:</span>
+            <li>Array Contents: <span id="array"></span></li>
+            <li>Array Length: <span id="length"></span></li>
+            <li>All Numbers: <span id="allNumber"></span></li>
+            <li>All Strings: <span id="allString"></span></li>
+            <li>All Objects: <span id="allObject"></span></li>
+            <li>All Undefined: <span id="allUndefined"></span></li>
+        </ul>
+        <script>
+            function arrayInfo(array = []) {
+                var arrayLength = array.length
+                var allString = array => array.every(element => typeof element === "string")
+                var allNumber = array => array.every(element => typeof element === "number")
+                var allObject = array => array.every(element => typeof element === "object")
+                var allUndefined = array => array.every(elemet => typeof elemet === "undefined")
+
+                console.log(
+                    "RESULTS:",
+                    "\n", 
+                    "Length: " + arrayLength, 
+                    "\n", 
+                    "allNumber: " + allNumber(array),
+                    "\n",
+                    "allString: " + allString(array),
+                    "\n",
+                    "allObject: " + allObject(array),
+                    "\n",
+                    "allUndefined: " + allUndefined(array)
+                )
+
+                document.getElementById("array").innerHTML = array.join(", ")
+                document.getElementById("length").innerHTML = arrayLength
+                document.getElementById("allNumber").innerHTML = allNumber(array)
+                document.getElementById("allString").innerHTML = allString(array)
+                document.getElementById("allObject").innerHTML = allObject(array)
+                document.getElementById("allUndefined").innerHTML = allUndefined(array)
+            }
+
+            arrayInfo([2, 5, 78])
+        </script>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+print(len("thumbnail"))
+print(len("penultimate"))
+print(len("Eiffel Tower"))
+print(len("New Westminster Secondary School"))
+print(len("supercalifragilisticexpealidocious"))

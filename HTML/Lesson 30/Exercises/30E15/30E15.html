@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>30E15</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2 id="demo"></h2>
+
+
+        <script>
+            var person1 = {name: "Alice", age: 15}
+            var person2 = {name: "Brian", age: 72}
+            var person3 = {name: "Franklin", age: 92}
+            var person4 = {name: "Elise", age: 5}
+
+            var person1_2 = person1.age
+            var person2_2 = person2.age
+            var person3_2 = person3.age
+            var person4_2 = person4.age
+
+            var people = [person1_2, person2_2, person3_2, person4_2];
+            var people2 = people.sort(function(a, b) {
+                return a - b
+            });
+
+            document.getElementById("demo").innerHTML = people2[0]
+
+            // It's a very roundabout way of doing it, but it works :)
+        </script>
+    </body>
+</html>

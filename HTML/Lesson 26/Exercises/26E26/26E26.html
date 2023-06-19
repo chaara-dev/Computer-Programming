@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>26E26</title>
+        <style>
+            #textbox {
+                position: absolute;
+                top: 0px;
+                right: 20px;
+            }
+            ul {
+                position: absolute;
+                top: 0px;
+                right: 450px;
+            }
+        </style>
+        <script>
+            function floor1() {
+                document.getElementById("textbox").innerHTML = "You are on floor: 1";
+                document.getElementById("item1").innerHTML = "Grand Commons";
+                document.getElementById("item2").innerHTML = "Servery";
+                document.getElementById("item3").innerHTML = "Workshops";
+                document.getElementById("item4").innerHTML = "Entrance/Exit";
+                document.getElementById("item2").style.display = "list-item";
+                document.getElementById("item3").style.display = "list-item";
+                document.getElementById("item4").style.display = "list-item";
+                document.getElementById("b").innerHTML = "Floor 1";
+            }
+            function floor3() {
+                document.getElementById("textbox").innerHTML = "You are on floor: 3";
+                document.getElementById("item1").innerHTML = "Classrooms";
+                document.getElementById("item2").innerHTML = "Room 3020";
+                document.getElementById("item3").innerHTML = "THE BEE ROOM";
+                document.getElementById("item4").style.display = "none";
+                document.getElementById("item2").style.display = "list-item";
+                document.getElementById("item3").style.display = "list-item";
+                document.getElementById("b").innerHTML = "Floor 3";
+            }
+            function floor2() {
+                document.getElementById("textbox").innerHTML = "You are on floor: 2";
+                document.getElementById("item1").innerHTML = "Classrooms";
+                document.getElementById("item2").innerHTML = "Stairs";
+                document.getElementById("item2").style.display = "list-item"
+                document.getElementById("item3").style.display = "none";
+                document.getElementById("item4").style.display = "none";
+                document.getElementById("b").innerHTML = "Floor 2";
+            }
+
+            function mz() {
+                document.getElementById("textbox").innerHTML = "You are on floor: Mezzanine";
+                document.getElementById("item1").innerHTML = "Learning Commons";
+                document.getElementById("item2").style.display = "none";
+                document.getElementById("item4").style.display = "none";
+                document.getElementById("item3").style.display = "none";
+                document.getElementById("b").innerHTML = "Mezzanine";
+            }
+            function  backrooms() {
+                document.getElementById("textbox").innerHTML = "You are on floor: ???";
+                document.getElementById("item1").innerHTML = "Secret NWSS Basement";
+                document.getElementById("item2").innerHTML = "???";
+                document.getElementById("item3").innerHTML = "[Information Redacted]";
+                document.getElementById("item4").style.display = "none";
+                document.getElementById("item2").style.display = "list-item";
+                document.getElementById("item3").style.display = "list-item";
+                document.getElementById("b").innerHTML = "???";
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="floor1()">1</button>
+        <br />
+        <button type="button" onclick="mz()">MZ</button>
+        <br />
+        <button type="button" onclick="floor2()">2 </button>
+        <br />
+        <button type="button" onclick="floor3()">3</button>
+        <br />
+        <button type="button" onclick="backrooms()">B</button>
+        <br />
+        <p id="textbox">
+
+        </p>
+        <ul><b id="b"></b>
+            <li id="item1"></li>
+            <li id="item2"></li>
+            <li id="item3"></li>
+            <li id="item4"></li>
+        </ul>
+    </body>
+</html>

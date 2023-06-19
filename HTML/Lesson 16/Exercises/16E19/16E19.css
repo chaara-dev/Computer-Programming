@@ -1,0 +1,9 @@
+body {
+    background-color: darkgreen; /* CHANGED FROM "GREEN" TO "DARKGREEN" FOR BETTER VISIBILITY */
+}
+p {
+    color: pink;
+}
+h1 {
+    color: navy;
+}

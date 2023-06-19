@@ -1,0 +1,29 @@
+<script>
+    var computer = {
+        name: "Tyler's Computer",
+        speed: 6,
+        turnedOn: true,
+        manufacturer: "Alienware",
+        os: "Windows 12",
+
+        info: function information() {
+            return this.name + ": Manufactured by " + this.manufacturer + ". Running " + this.os + "."
+        },
+        turnOn: function turnOnPC() {
+            this.turnedOn = true
+            return "ok!"
+        },
+        turnOff: function turnOffPC() {
+            this.turnedOn = false
+            return "ok!"
+        },
+        isFast: function isItFast() {
+            if (this.speed >= 20) {
+                return computer.speed = true
+            }
+            else return computer.speed = false
+        }
+    }
+
+    console.log(computer)
+</script>

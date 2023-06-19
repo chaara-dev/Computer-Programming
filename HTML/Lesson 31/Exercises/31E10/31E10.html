@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>31E10</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>Random Number between 50 and 100 (inclusive):</h2>
+        <button onclick="document.getElementById('textbox').innerHTML = randomNumber(50, 100)">Click Me</button>
+
+        <p id="textbox"></p>
+
+        <script>
+            function randomNumber(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) ) + min
+            }
+        </script>
+    </body>
+</html>

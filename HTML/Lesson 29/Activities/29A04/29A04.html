@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>29A04</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>Never Create Strings as Objects.</h2>
+        <p>Javascript objects cannot be compared.</p>
+
+        <p id="demo"></p>
+
+        <script>
+            var x = new String("John") // x is an object
+            var y = new String("John") // y is an object
+
+            document.getElementById("demo").innerHTML = (x === y)
+        </script>
+    </body>
+</html>

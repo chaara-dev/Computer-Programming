@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>25E12</title>
+        <style>
+            body {
+                background-color: greenyellow;
+                counter-reset: counter1;
+            }
+            header {
+                color: green;
+                font-size: 40px;
+                font-weight: bold;
+                text-align: center;
+            }
+            h3 {
+                counter-reset: counter2;
+            }
+            h3:before {
+                counter-increment: counter1;
+                content: counter(counter1) ". ";
+            }
+            h4 {
+                margin-left: 40px;
+                counter-increment: counter2;
+            }
+            h4:before {
+                content: counter(counter1) "." counter(counter2) " ";
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Top 3 best-selling albums of all time:
+        </header>
+
+        <h3>Eagles - "Their Greatest Hits (1971-1975)"</h3>
+        <h4>Take it Easy</h4>
+        <h4>Witchy Woman</h4>
+        <h4>Lyin' Eyes</h4>
+        <h4>Already Gone</h4>
+        
+        <h3>Micheal Jackson - "Thriller"</h3>
+        <h4>Wanna Be Startin' Somethin'</h4>
+        <h4>Baby Be Mine</h4>
+        <h4>The Girl Is Mine</h4>
+        <h4>Thriller</h4>
+
+        <h3>Eagles - "Hotel California"</h3>
+        <h4>Hotel California</h4>
+        <h4>New Kid in Town</h4>
+        <h4>Life in the Fast Lane</h4>
+        <h4>Wasted Time</h4>
+    </body>
+</html>

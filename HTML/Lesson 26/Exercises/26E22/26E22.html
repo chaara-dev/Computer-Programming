@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>26E22</title>
+        <style>
+            html {
+                display: table;
+                margin: auto;
+            }
+            body {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .smallbtns {
+                visibility: hidden;
+            }
+            .placeholder {
+                visibility: hidden;
+            }
+        </style>
+        <script>
+            // START OF RED JS \\
+            function redcolors() {
+                document.getElementById("yellowbtn").style.visibility = "visible";
+                document.getElementById("orangebtn").style.visibility = "visible";
+                document.getElementById("redbtn").style.visibility = "visible";
+            }
+            function yellow() {
+                document.getElementById("bigredbtn").style.backgroundColor = "yellow";
+                document.getElementById("bigredbtn").style.border = "1.8px solid gray";
+                document.getElementById("bigredbtn").style.borderRadius = "3px";
+                document.getElementById("bigredbtn").innerHTML = "Yellow"
+            }
+            function orange() {
+                document.getElementById("bigredbtn").style.backgroundColor = "orange";
+                document.getElementById("bigredbtn").style.border = "1.8px solid gray";
+                document.getElementById("bigredbtn").style.borderRadius = "3px";
+                document.getElementById("bigredbtn").innerHTML = "Orange"
+            }
+            function red() {
+                document.getElementById("bigredbtn").style.backgroundColor = "red";
+                document.getElementById("bigredbtn").style.border = "1.8px solid gray";
+                document.getElementById("bigredbtn").style.borderRadius = "3px";
+                document.getElementById("bigredbtn").innerHTML = "Red"
+            }
+            // END OF RED JS \\
+
+            
+            // START OF BLUE JS \\
+            function bluecolors() {
+                document.getElementById("pinkbtn").style.visibility = "visible";
+                document.getElementById("purplebtn").style.visibility = "visible";
+                document.getElementById("bluebtn").style.visibility = "visible";
+            }
+            function pink() {
+                document.getElementById("bigbluebtn").style.backgroundColor = "pink";
+                document.getElementById("bigbluebtn").style.border = "1.8px solid gray";
+                document.getElementById("bigbluebtn").style.borderRadius = "3px";
+                document.getElementById("bigbluebtn").innerHTML = "Pink"
+            }
+            function purple() {
+                document.getElementById("bigbluebtn").style.backgroundColor = "#5D3FD3";
+                document.getElementById("bigbluebtn").style.border = "1.8px solid gray";
+                document.getElementById("bigbluebtn").style.borderRadius = "3px";
+                document.getElementById("bigbluebtn").innerHTML = "Purple"
+            }
+            function blue() {
+                document.getElementById("bigbluebtn").style.backgroundColor = "lightblue";
+                document.getElementById("bigbluebtn").style.border = "1.8px solid gray";
+                document.getElementById("bigbluebtn").style.borderRadius = "3px";
+                document.getElementById("bigbluebtn").innerHTML = "Blue"
+            }
+            // END OF BLUE JS \\
+
+
+            // START OF GREEN JS \\
+            function greencolors() {
+                document.getElementById("cyanbtn").style.visibility = "visible";
+                document.getElementById("greenbtn").style.visibility = "visible";
+                document.getElementById("limebtn").style.visibility = "visible";
+            }
+            function cyan() {
+                document.getElementById("biggreenbtn").style.backgroundColor = "seagreen";
+                document.getElementById("biggreenbtn").style.border = "1.8px solid gray";
+                document.getElementById("biggreenbtn").style.borderRadius = "3px";
+                document.getElementById("biggreenbtn").innerHTML = "Sea Green"
+            }
+            function green() {
+                document.getElementById("biggreenbtn").style.backgroundColor = "lightgreen";
+                document.getElementById("biggreenbtn").style.border = "1.8px solid gray";
+                document.getElementById("biggreenbtn").style.borderRadius = "3px";
+                document.getElementById("biggreenbtn").innerHTML = "Green"
+            }
+            function lime() {
+                document.getElementById("biggreenbtn").style.backgroundColor = "lime";
+                document.getElementById("biggreenbtn").style.border = "1.8px solid gray";
+                document.getElementById("biggreenbtn").style.borderRadius = "3px";
+                document.getElementById("biggreenbtn").innerHTML = "Lime"
+            }
+            // END OF GREEN JS \\
+        </script>
+    </head>
+    <body>
+        <button class="placeholder">PLACEHOLDER</button>
+        <button onclick="redcolors()" id="bigredbtn">Red</button>
+        <button class="placeholder">PLACEHOLDER</button>
+
+                                <br /><br /><br />
+
+                                <button class="placeholder">smaflll</button>
+
+        <button onclick="yellow()" id="yellowbtn" class="smallbtns">Yellow</button>
+        <button onclick="orange()" id="orangebtn" class="smallbtns">Orange</button>
+        <button onclick="red()" id="redbtn" class="smallbtns">Red</button>
+
+            <br /><br />
+
+        <button class="placeholder">PLACEHOLDER</button>
+        <button onclick="bluecolors()" id="bigbluebtn">Blue</button>
+        <button class="placeholder">PLACEHOLDER</button>
+
+                                <br /><br /><br />
+
+                                <button class="placeholder">smallfffrrl</button>
+
+        <button onclick="pink()" id="pinkbtn" class="smallbtns">Pink</button>
+        <button onclick="purple()" id="purplebtn" class="smallbtns">Purple</button>
+        <button onclick="blue()" id="bluebtn" class="smallbtns">Blue</button>
+            <br /><br />
+
+        <button class="placeholder">PLACEHOLDER</button>
+        <button onclick="greencolors()" id="biggreenbtn">Green</button>
+        <button class="placeholder">PLACEHOLDER</button>
+
+                                <br /><br /><br />
+
+                                <button class="placeholder">sfeel</button>
+                                
+        <button onclick="cyan()" id="cyanbtn" class="smallbtns">Sea Green</button>
+        <button onclick="green()" id="greenbtn" class="smallbtns">Green</button>
+        <button onclick="lime()" id="limebtn" class="smallbtns">Lime</button>
+    </body>
+</html>

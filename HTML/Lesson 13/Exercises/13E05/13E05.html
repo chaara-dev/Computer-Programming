@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>13E05</title>
+        <style>
+            HEADER {
+                background-color: #777;
+                text-align: center;
+                color: white;
+                font-size: 60pt;
+                padding: 40px;
+            }
+            NAV {
+                font-size: 20pt;
+                padding: 10px;
+                float: left;
+                background-color: #999999;
+                height: 200px;
+                width: 20%;
+            }
+            ARTICLE {
+                float: right;
+                font-size: 14pt;
+                padding: 10px;
+                background-color: #f1f1f1;
+                height: 200px;
+                width: 77%;
+            }
+            #NAV2 {
+                font-size: 20pt;
+                padding: 10px;
+                float: right;
+                background-color: #999999;
+                height: 200px;
+                width: 20%;
+            }
+            #ARTICLE2 {
+                float: left;
+                font-size: 14pt;
+                padding: 10px;
+                background-color: #f1f1f1;
+                height: 200px;
+                width: 77%;
+            }
+            #IMAGE1 {
+                float: right;
+                visibility: hidden;
+            }
+            #IMAGE2 {
+                float: right;
+                visibility: hidden;
+            }
+            #footer {
+                background-color: #444;
+                text-align: center;
+                color: white;
+                float: bottom;
+            }
+        </style>
+    </head>
+    <script>
+        function skeletontext() {
+            document.getElementById("text").innerHTML = "The basic HTML skeleton is the set of tags required of every HTML web page you build. The tags that make up the skeleton tell browsers what kind of file it is reading, and without the skeleton HTML files will not be rendered correctly in web browsers.";
+
+            document.getElementById("image1").setAttribute("src", "skeleton.PNG");
+            document.getElementById("image1").style.visibility = "visible";
+        }
+        function divtext() {
+            document.getElementById("text").innerHTML = "The div tag defines a division or a section in an HTML document. The div tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The div tag is easily styled by using the class or id attribute.";
+
+            document.getElementById("image1").setAttribute("src", "div.PNG");
+            document.getElementById("image1").style.visibility = "visible";
+        }
+        function imagestext() {
+            document.getElementById("text").innerHTML = "The HTML img tag is used to embed an image in a web page. Images are not technically inserted into a web page; images are linked to web pages. The img tag creates a holding space for the referenced image. The img tag is empty, it contains attributes only, and does not have a closing tag.";
+
+            document.getElementById("image1").setAttribute("src", "image.PNG");
+            document.getElementById("image1").style.visibility = "visible";
+        }
+        function bodytext() {
+            document.getElementById("text").innerHTML = "The body tag defines the document's body. The body element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. Note: There can only be one body element in an HTML document.";
+
+            document.getElementById("image1").setAttribute("src", "body.PNG");
+            document.getElementById("image1").style.visibility = "visible";
+        }
+
+
+        function framestext() {
+            document.getElementById("text2").innerHTML = "HTML frames are used to divide your browser window into multiple sections where each section can load a separate HTML document. A collection of frames in the browser window is known as a frameset. The window is divided into frames in a similar way the tables are organized: into rows and columns.";
+
+            document.getElementById("image2").setAttribute("src", "frames.PNG");
+            document.getElementById("image2").style.visibility = "visible";
+        }
+        function csstext() {
+            document.getElementById("text2").innerHTML = "CSS is the language for describing the presentation of Web pages, including colors, layout, and fonts. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers. CSS is independent of HTML and can be used with any XML-based markup language.";
+
+            document.getElementById("image2").setAttribute("src", "css.PNG");
+            document.getElementById("image2").style.visibility = "visible";
+        }
+        function dynamictext() {
+            document.getElementById("text2").innerHTML = "Dynamic HTML is a collective term for a combination of Hypertext Markup Language (HTML) tags and options that can make Web pages more animated and interactive than previous versions of HTML. Much of dynamic HTML is specified in HTML 4.0.";
+
+            document.getElementById("image2").setAttribute("src", "dhtml.PNG");
+            document.getElementById("image2").style.visibility = "visible";
+        }
+        function javatext() {
+            document.getElementById("text2").innerHTML = "Javascript is used by programmers across the world to create dynamic and interactive web content like applications and browsers. JavaScript is so popular that it's the most used programming language in the world, used as a client-side programming language by 97.0% of all websites.";
+
+            document.getElementById("image2").setAttribute("src", "js.PNG");
+            document.getElementById("image2").style.visibility = "visible";
+        }
+    </script>
+    <body>
+        <header>
+            HTML in a nutshell
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" onclick="skeletontext()">The HTML Skeleton</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="divtext()">The Div Tag</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="imagestext()">Images</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="bodytext()">Body Tags</a>
+                    </li>
+                </ul>
+            </nav>
+            <article>
+                <span id="text">
+                    Welcome! This page will teach you the basics of HTML. Just click on the links to display bits of information.
+                </span>
+                <img src="" id="image1">
+            </article>
+        </section>
+
+        <section>
+            <nav id="NAV2">
+                <ul>
+                    <li>
+                        <a href="#" onclick="framestext()">Frames</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="csstext()">CSS</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="dynamictext()">Dynamic HTML</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="javatext()">JavaScript</a>
+                    </li>
+                </ul>
+            </nav>
+            <article id="ARTICLE2">
+                <span id="text2">
+                    These 4 topics are more advanced. It is reccomended for you to read about the first four topics first.
+                </span>
+                <img src="" id="image2">
+            </article>
+        </section>
+
+        <div id="footer">
+            <p>
+                Thank you for coming to my website. More topics to come!
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<script>
+    var output
+
+    function superAdd(input1, input2) {
+        if (typeof input1 == "number" && typeof input2 == "number") {
+            output = input1 + input2
+        }
+        if (typeof input1 == "string" && typeof input2 == "string") {
+            input1 = parseInt(input1)
+            input2 = parseInt(input2)
+
+            output = input1 + input2
+        }
+        if (input1 == true && input2 == true || input1 == false && input2 == false) {
+            output = false
+        }
+        if (input1 == undefined &&  input2 == undefined) {
+            output = "undefined"
+        }
+        if (input1 == null && input2 == null) {
+            output = "null"
+        }
+        if (Array.isArray(input1) == true && Array.isArray(input2) == true) {
+            output = input1.concat(input2)
+        }
+        if (typeof input1 == "object" && typeof input2 == "object") {
+            output = Object.assign(input1, input2)
+        }
+        if (input1 instanceof Date && input2 instanceof Date) {
+            output = input1.getTime() + input2.getTime()
+        }
+
+        else {
+            output = "Error"
+        }
+        
+        console.log(output)
+    }
+
+    superAdd("9", 7)
+</script>

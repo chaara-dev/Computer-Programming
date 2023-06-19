@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>34A16</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>In this example we demonstrate a simple class definiton and how to use it.</h2>
+
+        <p id="demo"></p>
+
+        <script>
+            class Car {
+                constructor(brand) {
+                    this.carname = brand;
+                }
+            }
+
+            mycar = new Car("Ford")
+
+            document.getElementById("demo").innerHTML = mycar.carname
+        </script>
+    </body>
+</html>

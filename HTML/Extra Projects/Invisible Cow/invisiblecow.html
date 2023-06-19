@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Invisible Cow Game</title>
+        <script src="https://randojs.com/1.0.0.js"></script>
+        <style>
+            #cow {
+                z-index: 1;
+                width: 150px;
+                height: 170px;
+                position: sticky;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #intro {
+                z-index: 5;
+                text-align: center;
+                font-size: 20pt;
+                font-family: monospace;
+            }
+            #instructions {
+                z-index: 5;
+                text-align: center;
+                font-size: 10pt;
+                font-family: monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="intro"> <!-- Title/Introduction -->
+            <b>Invisible Cow Game</b>
+        </div>
+
+        <div id="instructions"> <!-- Instructions -->
+            The game is simple. Double click the cow to make it go invisible, then try to find it by clicking the screen.
+            <br />
+            Good luck!
+        </div>
+
+        <div id="cow" 
+        ondblclick=
+           "document.getElementById('cow').style.opacity = '0.0'; /* Change opacity of the cow on doubleclick */
+            document.getElementById('cow').style.top = rando(0, innerHeight); /* Change position of cow on doubleclick */
+            document.getElementById('cow').style.left = rando(0, innerWidth); 
+            document.getElementById('instructions').style.opacity = '0.5'; /* change opacity of instructions and title on doubleclick */
+            document.getElementById('intro').style.opacity = '0.5';" 
+        onclick=
+           "document.getElementById('cow').style.opacity = '1'; /* Change opacity of the cow on singleclick */
+            document.getElementById('instructions').style.opacity = '1'; /* Change opacity of the instructions and title on singleclick */
+            document.getElementById('intro').style.opacity = '1';"> 
+                <img src="invisiblecow.jpg">
+        </div>
+    </body>
+</html>

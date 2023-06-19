@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>24E05</title>
+
+        <!-- SORRY THAT IT'S SO UGLY!! -->
+
+        <style>
+            ul {
+                text-decoration: none;
+                font-family: monospace;
+                padding-left: 0;
+                color: white;
+            }
+            li {
+                color: white;
+                background-color: darkorange;
+                display: block;
+                float: left;
+                padding: 20px;
+                position: relative;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            li:hover {
+                background-color: red;
+            }
+            ul li {
+                background-color: orange;
+
+            }
+            .dropdowncontent1 {
+                display: none;
+                position: absolute;
+                background-color: orange;
+                min-width: 140px;
+                z-index: 1;
+                cursor: pointer;
+                clear: both;
+            }
+            .dropdowncontent2 {
+                display: none;
+                position: absolute;
+                background-color: orange;
+                min-width: 140px;
+                z-index: 1;
+                cursor: pointer;
+                clear: both;
+            }
+            .dropdowncontent3 {
+                display: none;
+                position: absolute;
+                background-color: orange;
+                min-width: 140px;
+                z-index: 1;
+                cursor: pointer;
+                clear: both;
+            }
+            .dropdowncontent1 a {
+                color: white;
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+                clear: both;
+            }
+            .dropdowncontent2 a {
+                color: white;
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+                clear: both;
+            }
+            .dropdowncontent3 a {
+                color: white;
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+                clear: both;
+            }
+            .dropbtn1:hover .dropdowncontent1{
+                display: block;
+                clear: both;
+            }
+            .dropbtn2:hover .dropdowncontent2{
+                display: block;
+                clear: both;
+            }
+            .dropbtn3:hover .dropdowncontent3{
+                display: block;
+                clear: both;
+            }
+            .dropdowncontent1 a:hover {
+                background-color: red;
+                clear: both;
+            }
+            .dropdowncontent2 a:hover {
+                background-color: red;
+                clear: both;
+            }
+            .dropdowncontent3 a:hover {
+                background-color: red;
+                clear: both;
+            }
+            .dropdown:hover {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dropdown">
+            <ul>
+                <li class="dropbtn1">
+                    One
+                    <div class="dropdowncontent1">
+                        <a href="#">Sub-1</a>
+                        <a href="#">Sub-2</a>
+                        <a href="#">Sub-3</a>
+                    </div>
+                </li>
+                <li class="dropbtn2">
+                    Two
+                    <div class="dropdowncontent2">
+                        <a href="#">Sub-1</a>
+                        <a href="#">Sub-2</a>
+                        <a href="#">Sub-3</a>
+                    </div>
+                </li>
+                <li class="dropbtn3">
+                    Three
+                    <div class="dropdowncontent3">
+                        <a href="#">Sub-1</a>
+                        <a href="#">Sub-2</a>
+                        <a href="#">Sub-3</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

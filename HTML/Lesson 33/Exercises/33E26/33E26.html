@@ -1,0 +1,13 @@
+<script>
+    function assertValidNumber(anyth) {
+        var output = anyth * 1
+
+        if (isNaN(output) == true) {
+            throw "error. Invalid Input"
+        }else {
+            console.log(Number(output))
+        }
+    }
+
+    assertValidNumber("20")
+</script>

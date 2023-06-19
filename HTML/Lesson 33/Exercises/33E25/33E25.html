@@ -1,0 +1,27 @@
+<script>
+    function calculate(num01, num02, operator) {
+        if (typeof num01 != "number" || typeof num02 != "number") {
+            throw "error: Invalid Number Input"
+        }
+        
+        switch(operator) {
+                case "/":
+                    console.log(num01 / num02)
+                    break;
+                case "*":
+                    console.log(num01 * num02)
+                    break;
+                case "+":
+                    console.log(num01 + num02)
+                    break;
+                case "-":
+                    console.log(num01 - num02)
+                    break;
+                default:
+                    throw "error: Invalid Operator Input"
+        }
+        
+    }
+
+    calculate(10, 20, "*")
+</script>

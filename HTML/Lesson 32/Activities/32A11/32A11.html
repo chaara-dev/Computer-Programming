@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>32A11</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>Javascript Loops</h2>
+        <p>A loop with a <b>break</b> statement.</p>
+
+        <p id="demo"></p>
+
+
+        <script>
+            var text = "";
+            var i;
+            for (i = 0; i <= 10; i++) {
+                if (i === 3) { break; }
+                text += "The number is " + i + "<br />";
+            }
+
+            document.getElementById("demo").innerHTML = text;
+        </script>
+    </body>
+</html>

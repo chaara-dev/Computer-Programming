@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>28E25</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+
+        <script>
+            function aroundVO(vector) {
+                console.log(
+                    [
+                        {x: (vector.x - 1), y: vector.y},
+                        {x: (vector.x + 1), y: vector.y},
+                        {x: vector.x, y: (vector.y - 1)},
+                        {x: vector.x, y: (vector.y + 1)}
+                    ]
+                )
+            }
+
+            aroundVO({x: 10, y: 15})
+        </script>
+    </body>
+</html>

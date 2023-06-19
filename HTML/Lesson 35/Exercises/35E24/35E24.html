@@ -1,0 +1,27 @@
+<script>
+    const flowerCount = str => {
+        return str
+            .split("\n")
+            .map(x => x.split(""))
+            .reduce(
+                (l, c, i, a) =>
+                    l +
+                    c.reduce(
+                        (ll, cc, j, aa) =>
+                            cc === "o" &&
+                                aa[j - 1] === "<" &&
+                                aa[j + 1] === ">" &&
+                                a[i + 1] !== undefined &&
+                                a[i + 1][j] === "v" &&
+                                a[i - 1] !== undefined &&
+                                a[i - 1][j] === "^"
+                                ? ll + 1
+                                : ll,
+                        0
+                    ),
+                0
+            );
+    };
+
+    console.log(flowerCount())
+</script>

@@ -1,0 +1,542 @@
+<html>
+
+<head>
+    <title>Singleplayer</title>
+    <style>
+        body {
+            background-image: url("tictactoe_wallpaper.jpg");
+            background-color: rgba(255, 255, 255, 0.8);
+            background-blend-mode: lighten;
+            background-size: 600px;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        .game-buttons {
+            box-sizing: border-box;
+            height: 100px;
+            width: 100px;
+            font-size: 40px;
+            background-color: lightgray;
+            margin: 0;
+            user-select: none;
+        }
+
+        button:hover {
+            background-color: rgb(236, 236, 236);
+            user-select: none;
+        }
+
+        .information {
+            opacity: 0.6;
+            user-select: none;
+        }
+
+        #top-left {
+            border-top: none;
+            border-left: none;
+            border-radius: 20px 0px 0px 0px;
+            user-select: none;
+        }
+
+        #top-center {
+            border-top: none;
+            user-select: none;
+        }
+
+        #top-right {
+            border-top: none;
+            border-right: none;
+            border-radius: 0px 20px 0px 0px;
+            user-select: none;
+        }
+
+        #middle-left {
+            border-left: none;
+            user-select: none;
+        }
+
+        #middle-right {
+            border-right: none;
+            user-select: none;
+        }
+
+        #bottom-left {
+            border-left: none;
+            border-bottom: none;
+            border-radius: 0px 0px 0px 20px;
+            user-select: none;
+        }
+
+        #bottom-center {
+            border-bottom: none;
+            user-select: none;
+        }
+
+        #bottom-right {
+            border-bottom: none;
+            border-right: none;
+            border-radius: 0px 0px 20px 0px;
+            user-select: none;
+        }
+
+        h1 {
+            box-shadow: 3px 3px 10px lightgray;
+            max-width: fit-content;
+            padding: 10px;
+            border: lightgrey solid;
+            user-select: none;
+            background-color: rgba(231, 231, 231, 0.9);
+            border-radius: 20px;
+        }
+
+        #gamemode-pick {
+            display: none;
+        }
+
+        #winBox {
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 15px;
+            user-select: none;
+        }
+
+        #winBasket {
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 15px;
+            user-select: none;
+            visibility: hidden;
+        }
+
+        #scoreboard {
+            visibility: visible;
+        }
+
+        #scoreboard-X,
+        #scoreboard-O,
+        #scoreboard {
+            font-size: 20px;
+        }
+
+        #newGameButton {
+            visibility: hidden;
+            box-sizing: border-box;
+            background-color: rgb(236, 236, 236);
+            margin: 0;
+            height: 45px;
+            width: 120px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            user-select: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        #newGameButton:hover {
+            background-color: rgb(170, 170, 170);
+        }
+
+        .pick-buttons {
+            box-sizing: border-box;
+            background-color: rgb(236, 236, 236);
+            margin: 0;
+            height: 45px;
+            user-select: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .pick-buttons:hover {
+            user-select: none;
+            background-color: lightgray;
+        }
+
+        #main-game {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <center id="gamemode-pick">
+        <h1>Choose Game Mode</h1>
+    </center>
+    <center id="main-game">
+        <h1 onclick="reloadPage()" id="titleBox">TIC TAC TOE</h1>
+        <h4></h4>
+        <h4 id="xGoesFirst" class="information">(X goes first)</h4>
+        <h4 id="againstwho" class="information"></h4>
+        <table id="playGrid">
+            <tr>
+                <td><button id="top-left" class="game-buttons"></button></td>
+                <td><button id="top-center" class="game-buttons"></button></td>
+                <td><button id="top-right" class="game-buttons"></button></td>
+            </tr>
+            <tr>
+                <td><button id="middle-left" class="game-buttons"></button></td>
+                <td><button id="middle-center" class="game-buttons"></button></td>
+                <td><button id="middle-right" class="game-buttons"></button></td>
+            </tr>
+            <tr>
+                <td><button id="bottom-left" class="game-buttons"></button></td>
+                <td><button id="bottom-center" class="game-buttons"></button></td>
+                <td><button id="bottom-right" class="game-buttons"></button></td>
+            </tr>
+        </table>
+        <div id="winBasket"><span id="winBox"></span> Wins!</div>
+        <div id="scoreboard">
+            Times X has won: <span id="scoreboard-X"></span>
+            <br />
+            Times O has won: <span id="scoreboard-O"></span>
+        </div>
+        <br /><br />
+        <button id="newGameButton" onclick="clearButtonInnerHTML()">New Game</button>
+    </center>
+
+    <script>
+        // Starting player turn.
+        let playerTurn = "X";
+
+        // Get a reference to the button elements
+        const topLeftButton = document.getElementById("top-left");
+        const topCenterButton = document.getElementById("top-center");
+        const topRightButton = document.getElementById("top-right");
+        const middleLeftButton = document.getElementById("middle-left");
+        const middleCenterButton = document.getElementById("middle-center");
+        const middleRightButton = document.getElementById("middle-right");
+        const bottomLeftButton = document.getElementById("bottom-left");
+        const bottomCenterButton = document.getElementById("bottom-center");
+        const bottomRightButton = document.getElementById("bottom-right");
+
+        // Attach event listeners to the button elements
+        topLeftButton.addEventListener('click', buttonClicked);
+        topCenterButton.addEventListener('click', buttonClicked);
+        topRightButton.addEventListener('click', buttonClicked);
+
+        middleLeftButton.addEventListener('click', buttonClicked);
+        middleCenterButton.addEventListener('click', buttonClicked);
+        middleRightButton.addEventListener('click', buttonClicked);
+
+        bottomLeftButton.addEventListener('click', buttonClicked);
+        bottomCenterButton.addEventListener('click', buttonClicked);
+        bottomRightButton.addEventListener('click', buttonClicked);
+
+
+        var numXWins = 0;
+        var numOWins = 0;
+
+        var XWins = false;
+        var OWins = false;
+
+        var alreadyDone = false;
+
+        document.getElementById("scoreboard-X").innerHTML = numXWins;
+        document.getElementById("scoreboard-O").innerHTML = numOWins;
+
+
+        function againstHuman() {
+            // Make Game Board Visible and hides the choices
+            document.getElementById("main-game").style.visibility = "visible";
+            document.getElementById("gamemode-pick").style.display = "none";
+            document.getElementById("scoreboard").style.visibility = "visible";
+        }
+        function againstRobot() {
+            alert("Singleplayer is currently a work in progress.\nCheck with Tyler for more information.");
+        }
+
+        function reloadPage() {
+            location.reload();
+        }
+
+        function buttonClicked() {
+            if (playerTurn === "X") {
+                // fill the box with the player's symbol, then prevent clicking
+                this.innerHTML = playerTurn;
+                this.style.pointerEvents = "none";
+
+                // Change player turn
+                playerTurn = "O";
+
+                // Call the robotsTurn() function if it's the robots turn
+                if (topLeftButton.innerHTML.trim() != "" &&
+                    topCenterButton.innerHTML.trim() != "" &&
+                    topRightButton.innerHTML.trim() != "" &&
+                    middleLeftButton.innerHTML.trim() != "" &&
+                    middleCenterButton.innerHTML.trim() != "" &&
+                    middleRightButton.innerHTML.trim() != "" &&
+                    bottomLeftButton.innerHTML.trim() != "" &&
+                    bottomCenterButton.innerHTML.trim() != "" &&
+                    bottomRightButton.innerHTML.trim() != "" &&
+                    XWins == false || OWins == false) {
+                    robotsTurn();
+                } else {
+                    alert("AAAAAAAAA");
+                }
+            } else if (playerTurn === "O") {
+                // fill the box with the player's symbol, then prevent clicking
+                this.innerHTML = playerTurn;
+                this.style.pointerEvents = "none";
+
+                // Change player turn
+                playerTurn = "X";
+            }
+
+
+            if (topLeftButton.innerHTML == topCenterButton.innerHTML && topCenterButton.innerHTML == topRightButton.innerHTML && topCenterButton.innerHTML.trim() != "") {
+                // If the top row has three of the same symbol, show the win message
+                document.getElementById("winBasket").style.visibility = "visible";
+                document.getElementById("winBox").innerHTML = topLeftButton.innerHTML;
+
+                if (playerTurn == "X") {
+                    XWins = true;
+                    postGameFunction();
+                } else if (playerTurn == "O") {
+                    OWins = true;
+                    postGameFunction();
+                }
+            } else if (middleLeftButton.innerHTML == middleCenterButton.innerHTML && middleCenterButton.innerHTML == middleRightButton.innerHTML && middleCenterButton.innerHTML.trim() != "") {
+                // If the middle row has three of the same symbol, show the win message
+                document.getElementById("winBasket").style.visibility = "visible";
+                document.getElementById("winBox").innerHTML = middleLeftButton.innerHTML;
+
+                // Increment the win counter according to who won
+                if (middleCenterButton.innerHTML == "X") {
+                    XWins = true;
+                    postGameFunction();
+                } else if (middleCenterButton.innerHTML == "O") {
+                    OWins = true;
+                    postGameFunction();
+                }
+            } else if (bottomLeftButton.innerHTML == bottomCenterButton.innerHTML && bottomCenterButton.innerHTML == bottomRightButton.innerHTML && bottomCenterButton.innerHTML.trim() != "") {
+                // If the bottom row has three of the same symbol, show the win message
+                document.getElementById("winBasket").style.visibility = "visible";
+                document.getElementById("winBox").innerHTML = bottomLeftButton.innerHTML;
+
+                // Increment the win counter according to who won
+                if (bottomCenterButton.innerHTML == "X") {
+                    XWins = true;
+                    postGameFunction();
+                } else if (bottomCenterButton.innerHTML == "O") {
+                    OWins = true;
+                    postGameFunction();
+                }
+            } else if (topLeftButton.innerHTML == middleLeftButton.innerHTML && middleLeftButton.innerHTML == bottomLeftButton.innerHTML && middleLeftButton.innerHTML.trim() != "") {
+                // If the left column has three of the same symbol, show the win message
+                document.getElementById("winBasket").style.visibility = "visible";
+                document.getElementById("winBox").innerHTML = topLeftButton.innerHTML;
+
+                // Increment the win counter according to who won
+                if (middleLeftButton.innerHTML == "X") {
+                    XWins = true;
+                    postGameFunction();
+                } else if (middleLeftButton.innerHTML == "O") {
+                    OWins = true;
+                    postGameFunction();
+                }
+            } else if (topCenterButton.innerHTML == middleCenterButton.innerHTML && middleCenterButton.innerHTML == bottomCenterButton.innerHTML && middleCenterButton.innerHTML.trim() != "") {
+                // If the middle column has three of the same symbol, show the win message
+                document.getElementById("winBasket").style.visibility = "visible";
+                document.getElementById("winBox").innerHTML = topCenterButton.innerHTML;
+
+                // Increment the win counter according to who won
+                if (middleCenterButton.innerHTML == "X") {
+                    XWins = true;
+                    postGameFunction();
+                } else if (middleCenterButton.innerHTML == "O") {
+                    OWins = true;
+                    postGameFunction();
+                }
+            } else if (topRightButton.innerHTML == middleRightButton.innerHTML && middleRightButton.innerHTML == bottomRightButton.innerHTML && middleRightButton.innerHTML.trim() != "") {
+                // If the right column has three of the same symbol, show the win message
+                document.getElementById("winBasket").style.visibility = "visible";
+                document.getElementById("winBox").innerHTML = topRightButton.innerHTML;
+
+                // Increment the win counter according to who won
+                if (middleRightButton.innerHTML == "X") {
+                    XWins = true;
+                    postGameFunction();
+                } else if (middleRightButton.innerHTML == "O") {
+                    OWins = true;
+                    postGameFunction();
+                }
+            } else if (topRightButton.innerHTML == middleCenterButton.innerHTML && middleCenterButton.innerHTML == bottomLeftButton.innerHTML && middleCenterButton.innerHTML.trim() != "") {
+                // If the diagonal from top right to bottom left has three of the same symbol, show the win message
+                document.getElementById("winBasket").style.visibility = "visible";
+                document.getElementById("winBox").innerHTML = topRightButton.innerHTML;
+
+                // Increment the win counter according to who won
+                if (middleCenterButton.innerHTML == "X") {
+                    XWins = true;
+                    postGameFunction();
+                } else if (middleCenterButton.innerHTML == "O") {
+                    OWins = true;
+                    postGameFunction();
+                }
+            } else if (topLeftButton.innerHTML == middleCenterButton.innerHTML && middleCenterButton.innerHTML == bottomRightButton.innerHTML && middleCenterButton.innerHTML.trim() != "") {
+                // If the diagonal from top left to bottom right has three of the same symbol, show the win message
+                document.getElementById("winBasket").style.visibility = "visible";
+                document.getElementById("winBox").innerHTML = topLeftButton.innerHTML;
+
+                // Increment the win counter according to who won
+                if (middleCenterButton.innerHTML == "X") {
+                    XWins = true;
+                    postGameFunction();
+                } else if (middleCenterButton.innerHTML == "O") {
+                    OWins = true;
+                    postGameFunction();
+                }
+            } else if (topLeftButton.innerHTML.trim() != "" && topCenterButton.innerHTML.trim() != "" && topRightButton.innerHTML.trim() != "" && middleLeftButton.innerHTML.trim() != "" && middleCenterButton.innerHTML.trim() != "" && middleRightButton.innerHTML.trim() != "" && bottomLeftButton.innerHTML.trim() != "" && bottomCenterButton.innerHTML.trim() != "" && bottomRightButton.innerHTML.trim() != "") {
+                // If all of the boxes have a value other than an empty string, display tie
+                document.getElementById("winBasket").style.visibility = "visible"
+                document.getElementById("winBox").innerHTML = "Nobody";
+
+                document.getElementById("newGameButton").style.visibility = "visible";
+            }
+            else {
+                throw "error - Problems assigning victor.";
+                return;
+            }
+        }
+
+
+        function robotsTurn() {
+            var buttons = [topLeftButton, topCenterButton, topRightButton, middleLeftButton, middleCenterButton, middleRightButton, bottomLeftButton, bottomCenterButton, bottomRightButton];
+
+
+            if (topLeftButton.innerHTML.trim() != "" &&
+                topCenterButton.innerHTML.trim() != "" &&
+                topRightButton.innerHTML.trim() != "" &&
+                middleLeftButton.innerHTML.trim() != "" &&
+                middleCenterButton.innerHTML.trim() != "" &&
+                middleRightButton.innerHTML.trim() != "" &&
+                bottomLeftButton.innerHTML.trim() != "" &&
+                bottomCenterButton.innerHTML.trim() != "" &&
+                bottomRightButton.innerHTML.trim() != "" ||
+                XWins == true || OWins == true) {
+                // All the buttons are occupied
+                return;
+            }
+
+            // Loop until a button is successfully clicked or all buttons are occupied
+            while (true) {
+                var randomNumber = Math.floor(Math.random() * 9) + 1;
+
+                // Check if the button is already occupied
+                if (buttons[randomNumber - 1].innerHTML !== "") {
+                    // The button is occupied, so continue the loop
+                    continue;
+                }
+
+                // Click the button if it is not occupied
+                buttons[randomNumber - 1].click();
+
+                // Return from the function since the button was successfully clicked
+                return;
+            }
+        }
+
+
+        function postGameFunction() {
+            if (alreadyDone == true) {
+                return;
+            }
+
+            if (XWins == true) {
+                numXWins++;
+            } else if (OWins == true) {
+                numOWins++;
+            }
+
+            topLeftButton.style.pointerEvents = "none";
+            topCenterButton.style.pointerEvents = "none";
+            topRightButton.style.pointerEvents = "none";
+            middleLeftButton.style.pointerEvents = "none";
+            middleCenterButton.style.pointerEvents = "none";
+            middleRightButton.style.pointerEvents = "none";
+            bottomLeftButton.style.pointerEvents = "none";
+            bottomCenterButton.style.pointerEvents = "none";
+            bottomRightButton.style.pointerEvents = "none";
+
+            document.getElementById("newGameButton").style.visibility = "visible";
+            document.getElementById("titleBox").setAttribute("onclick", "");
+
+            document.getElementById("scoreboard-X").innerHTML = numXWins;
+            document.getElementById("scoreboard-O").innerHTML = numOWins;
+
+            alreadyDone = true;
+        }
+
+        function clearButtonInnerHTML() {
+            topLeftButton.innerHTML = "";
+            topCenterButton.innerHTML = "";
+            topRightButton.innerHTML = "";
+            middleLeftButton.innerHTML = "";
+            middleCenterButton.innerHTML = "";
+            middleRightButton.innerHTML = "";
+            bottomLeftButton.innerHTML = "";
+            bottomCenterButton.innerHTML = "";
+            bottomRightButton.innerHTML = "";
+
+            document.getElementById("winBasket").style.visibility = "hidden";
+            document.getElementById("newGameButton").style.visibility = "hidden";
+            document.getElementById("titleBox").setAttribute("onclick", "reloadPage()");
+
+            topLeftButton.style.pointerEvents = "";
+            topCenterButton.style.pointerEvents = "";
+            topRightButton.style.pointerEvents = "";
+            middleLeftButton.style.pointerEvents = "";
+            middleCenterButton.style.pointerEvents = "";
+            middleRightButton.style.pointerEvents = "";
+            bottomLeftButton.style.pointerEvents = "";
+            bottomCenterButton.style.pointerEvents = "";
+            bottomRightButton.style.pointerEvents = "";
+
+            playerTurn = "X";
+
+            XWins = false;
+            OWins = false;
+            alreadyDone = false;
+        }
+
+
+        // Create two image elements
+        const img = document.createElement("img");
+        const back = document.createElement("img");
+        img.src = "info-image.png";
+        back.src = "back-image.png";
+        img.alt = "Info Image";
+        back.alt = "Back Button";
+        img.style.position = "absolute";
+        back.style.position = "absolute";
+        img.style.bottom = "0";
+        back.style.top = "0";
+        img.style.right = "0";
+        back.style.left = "0";
+        img.style.width = "25px";
+        back.style.width = "40px";
+        img.style.height = "25px";
+        back.style.height = "40px";
+        img.style.opacity = "0.7";
+
+        // Register a click event listener for the image
+        img.addEventListener("click", function () {
+            console.log("This game of TicTacToe was made with the help of:");
+            console.log("Hannah: Who did most of the CSS and a major part of the HTML body.");
+            console.log("Tyler: Who did most of the Javascript, and some HTML and CSS as well.");
+            console.log("ChatGPT: Who was a major help in getting things to work properly");
+            console.log("ChatGPT: " + "https://chat.openai.com/chat");
+        }, { once: true });
+
+        back.addEventListener("click", function () {
+            window.open("HOMEPAGE.html", "_self");
+        })
+
+        // Add the image to the page
+        document.body.appendChild(img);
+        document.body.appendChild(back);
+    </script>
+</body>
+
+</html>

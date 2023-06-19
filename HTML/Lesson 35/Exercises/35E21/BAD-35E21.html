@@ -1,0 +1,84 @@
+<script>
+    counting = 1
+
+    function doTheNumber(number) {
+        if (number % 2 == 0) {
+            return number / 2
+        }else if (number % 2 != 0) {
+            return (number * 3) + 1
+        }
+    }
+
+    // console.log(doTheNumber(32))
+
+    function getOneFromTheNumber(a_number) {
+        if (doTheNumber(a_number) != 1) {
+           var firstTime = doTheNumber(a_number)
+           counting++
+            if (doTheNumber(firstTime) != 1) {
+                var secondTime = doTheNumber(firstTime)
+                counting++
+                if (doTheNumber(secondTime) != 1) {
+                    var thirdTime = doTheNumber(secondTime)
+                    counting++
+                    if (doTheNumber(thirdTime) != 1) {
+                        var fourthTime = doTheNumber(thirdTime)
+                        counting++
+                        if (doTheNumber(fourthTime) != 1) {
+                            var fifthTime = doTheNumber(fourthTime)
+                            counting++
+                            if (doTheNumber(fifthTime) != 1) {
+                                var sixthTime = doTheNumber(fifthTime)
+                                counting++
+                                if (doTheNumber(sixthTime) != 1) {
+                                    var seventhTime = doTheNumber(sixthTime)
+                                    counting++
+                                    if (doTheNumber(seventhTime) != 1) {
+                                        var eighthTime = doTheNumber(seventhTime)
+                                        counting++
+                                        if (doTheNumber(eighthTime) != 1) {
+                                            var ninthTime = doTheNumber(eighthTime)
+                                            counting++
+                                            if (doTheNumber(ninthTime) != 1) {
+                                                var tenthTime = doTheNumber(ninthTime)
+                                                counting++
+                                                if (doTheNumber(tenthTime)!= 1) {
+                                                    return "I give up. There was 100% an easier way to do this, I just can't think right now."
+                                                }
+                                            }else {
+                                                return counting
+                                            }
+                                        }else {
+                                            return counting
+                                        }
+                                    }else {
+                                        return counting
+                                    }
+                                }else {
+                                    return counting
+                                }
+                            }else {
+                                return counting
+                            }
+                        }else {
+                            return counting
+                        }
+                    }else {
+                        return counting
+                    }
+                }else {
+                    return counting
+                }
+            }else {
+                return counting
+            }
+        }else {
+            return counting
+        }
+    }
+
+    console.log(getOneFromTheNumber(12))
+
+    // BY FAR the most ugly code I've ever written. I'm so sorry.
+    // also, only 13, 12, 10, 8, 6, 5, 4, 3, 2 and 1 work.
+</script>

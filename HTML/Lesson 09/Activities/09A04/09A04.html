@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>09A04</title>
+        <style>
+            #image {
+                position:absolute;
+                top:50px;
+                left:50px;
+                visibility: visible;
+            }
+
+            #magic {
+                background-color: black;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 100px;
+                left: 400px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="image">
+            <img src="redswirl.jpg">
+        </div>
+        <div id="magic" onclick="document.getElementById('image').style.visibility='visible';" ondblclick="document.getElementById('image').style.visibility='hidden';">
+        </div>
+    </body>
+</html>

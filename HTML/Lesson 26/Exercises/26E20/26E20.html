@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>26E20</title>
+        <style>
+            #button2, #button3, #button4, #button5 {
+                visibility: hidden;
+            }
+            #button1 {
+                position: absolute;
+                top: 50px;
+                left: 50%;
+            }
+            #button2 {
+                position: absolute;
+                top: 40%;
+                left: 0px;
+            }
+            #button3 {
+                position: absolute;
+                top: 0;
+                left: 80%;
+            }
+            #button4 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            #button5 {
+                position: absolute;
+                left: 33%;
+                bottom: 33%;
+            }
+        </style>
+        <script>
+            function f1() {
+                document.getElementById("button1").style.visibility = "hidden"
+                document.getElementById("button2").style.visibility = "visible"
+            }
+            function f2() {
+                document.getElementById("button2").style.visibility = "hidden"
+                document.getElementById("button3").style.visibility = "visible"
+            }
+            function f3() {
+                document.getElementById("button3").style.visibility = "hidden"
+                document.getElementById("button4").style.visibility = "visible"
+            }
+            function f4() {
+                document.getElementById("button4").style.visibility = "hidden"
+                document.getElementById("button5").style.visibility = "visible"
+            }
+            function f5() {
+                window.alert("Okie dokie, done for real this time :)")
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="f1()" id="button1">Click Here!</button>
+        <button onclick="f2()" id="button2">Here!</button>
+        <button onclick="f3()" id="button3">I mean here</button>
+        <button onclick="f4()" id="button4">Try Again</button>
+        <button onclick="f5()" id="button5">Last time, I promise</button>
+    </body>
+</html>

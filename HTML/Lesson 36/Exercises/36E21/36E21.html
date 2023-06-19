@@ -1,0 +1,15 @@
+<script>
+    function stringChanger(str) {
+        if (str.trim().toLowerCase() == "yes" || str.trim().toLowerCase() == "positive" || str.trim().toLowerCase() == "true") {
+            return true
+        }
+        else if (str.trim().toLowerCase() == "no" || str.trim().toLowerCase() == "negative" || str.trim().toLowerCase() == "false") {
+            return false
+        }
+        else {
+            throw "invalid string"
+        }
+    }
+
+    console.log(stringChanger("Tyler"))
+</script>

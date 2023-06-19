@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>24E04</title>
+        <style>
+            body {
+                font-weight: bold;
+            }
+            div[lang~="en-us"] {
+                color: blue;
+            }
+            div[lang="pt"] {
+                color: green;
+            }
+            div[lang|="zh"] {
+                color: red;
+            }
+            div[data-lang="zh-TW"] {
+                color: purple;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div lang="en-us">Toronto, Ontario</div>
+        <div lang="pt">Quebec City, Quebec</div>
+        <div lang="zh">Vancouver, British Columbia</div>
+        <div lang="zh">Calgary, Alberta</div>
+        <div data-lang="zh-TW">Ottawa, Ontario</div>
+    </body>
+</html>

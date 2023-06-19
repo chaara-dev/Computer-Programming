@@ -1,0 +1,22 @@
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.area = width * height
+        }
+        findArea(x) {
+            return x + this.area
+        }
+    }
+    class Square extends Rectangle {
+        constructor(width, height) {
+            super(width, height)
+            this.area = width * height
+        }
+    }
+
+    newRectangle = new Rectangle(4, 2)
+    newSquare = new Square(5, 5)
+
+    console.log(newRectangle.findArea("Rectangle Area is: "))
+    console.log(newSquare.findArea("Square Area is: "))
+</script>

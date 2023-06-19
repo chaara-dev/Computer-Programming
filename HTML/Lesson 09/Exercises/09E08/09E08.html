@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>09E08</title>
+        <style>
+            #disk {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            #comp {
+                position: absolute;
+                top: 200px;
+                left: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="disk">
+            <img src="disk1.gif">
+        </div>
+        <div id="comp" onmouseover="document.getElementById('disk').style.visibility='hidden';"
+        onmouseout="document.getElementById('disk').style.visibility='visible';">
+            <img src="comp1.gif">
+        </div>
+    </body>
+</html>
