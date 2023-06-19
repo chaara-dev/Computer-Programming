@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int calculatePower(int num, int pow) {
+int power(int num, int pow) {
     int current = num;
     for (int i = 0; i < (pow - 1); i++) {
         current *= num;
@@ -19,7 +19,7 @@ int main() {
     cout << "Enter max time margaret will wait: "; cin >> margaret_wait;
 
     for (int time = 1; time <= margaret_wait; time++) {
-        altitude = (-6 * calculatePower(time, 4)) + (humidity * calculatePower(time, 3)) + (2 * calculatePower(time, 2)) + time;
+        altitude = (-6 * power(time, 4)) + (humidity * power(time, 3)) + (2 * power(time, 2)) + time;
         if (altitude <= 0) {
             found = true;
             hour = time;
