@@ -9,6 +9,7 @@ bool check(vector<int>& teams, int T) {
             return false;
         }
     }
+    
     return true;
 }
 
