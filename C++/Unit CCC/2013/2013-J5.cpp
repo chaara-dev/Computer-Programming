@@ -9,7 +9,7 @@ bool check(vector<int>& teams, int T) {
             return false;
         }
     }
-    
+
     return true;
 }
 
@@ -18,6 +18,7 @@ void calculatePossibleScore(vector<string>& gamesToPlay, vector<int>& teams, int
         if (check(teams, T)) {
             counts++;
         }
+        
         return;
     }
     string game = gamesToPlay[0];
@@ -27,6 +28,7 @@ void calculatePossibleScore(vector<string>& gamesToPlay, vector<int>& teams, int
     int addTo[3][2] = { {0, 3}, {3, 0}, {1, 1} };
     vector<int> clone = teams;
     vector<string> hold = gamesToPlay;
+
     for (int i = 0; i < 3; i++) {
         gamesToPlay = hold;
         teams = clone;
