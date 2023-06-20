@@ -1,9 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <sstream>
-#include <algorithm>
-
-using namespace std;
+#include "..\..\common.h"
 
 string travel(string direction, string position, int magnitude, vector<string>& collect){
     int currentX, currentY;

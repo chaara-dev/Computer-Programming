@@ -1,6 +1,4 @@
-#include <iostream>
-
-using namespace std;
+#include "..\..\common.h"
 
 int power(int num, int pow) {
     int current = num;
