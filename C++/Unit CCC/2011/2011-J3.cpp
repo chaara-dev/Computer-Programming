@@ -1,10 +1,10 @@
 #include "..\..\common.h"
 
-int main()
-{
+int main() {
     int firstTerm, secondTerm, sequenceLength;
     cin >> firstTerm >> secondTerm;
     sequenceLength = 2;
+
     while (true){
         int temp = firstTerm;
         firstTerm = secondTerm;
@@ -14,6 +14,7 @@ int main()
             break;
         }
     }
+    
     cout << sequenceLength << endl;
     return 0;
 }

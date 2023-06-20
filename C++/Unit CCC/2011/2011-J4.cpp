@@ -86,9 +86,11 @@ int main() {
         endSS >> endX >> endY;
         string print = to_string(endX) + " " + to_string(endY) + " " + condition;
         cout << print << endl;
+        
         if (condition == "DANGER") {
             break;
         }
+
         getline(cin, command);
     }
 
