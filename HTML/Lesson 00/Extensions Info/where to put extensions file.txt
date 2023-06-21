@@ -1,4 +1,0 @@
-1. copy the .vscode folder in the vscode extras folder
-2. Windows + R
-3. Type: - %USERPROFILE% -
-4. Select the existing files, and overwrite them by pasting the new files
