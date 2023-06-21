@@ -1,5 +1,6 @@
 # Computer-Programming
 A compilation of all my code written in high school to date.
+Almost all the programs written here are from Liem's classes, feel free to use any and all files, on the one condition you actually still learn stuff.
 
 All the files in this repo should work fine, without needing any external files/programs.
 The only exception to this is the C++ folder, where most, if not all files past Unit 02 require the 'common.h' header.
