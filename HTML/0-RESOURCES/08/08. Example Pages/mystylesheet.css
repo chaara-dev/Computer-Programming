@@ -1,0 +1,8 @@
+BODY {background-image: url(pinkytile.jpg); font-family: Arial;
+      background-attachment: fixed;}
+UL   {color: white; height: 150px; width: 300px; background-image:          url(tan.jpg); font-family: Garamond; font-size: 15pt; text-align:      right;}
+.title  {font-family: Verdana; font-size: 40pt; color: mediumpurple;
+         background-image: url(dolphins.jpg);}
+A    {text-decoration: overline;}
+.instructions {font-size: 10pt;}
+.warning {background-color: blue;}
