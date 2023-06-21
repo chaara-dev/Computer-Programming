@@ -1,6 +1,6 @@
 # Computer-Programming
-A compilation of all my code written in high school to date, shared with whoever for free.
-Almost all the programs written here are from Liem's classes, feel free to use any and all files, on the one condition you actually still learn stuff.
+A compilation of all my code written in high school to date, public for anyone who needs it.
+Almost all the programs written here are from Liem's classes, feel free to use any and all files, on the one condition you **actually still learn stuff**.
 All the files in this repo should work fine, without needing any external files/programs.
 
 
