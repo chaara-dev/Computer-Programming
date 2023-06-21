@@ -20,4 +20,4 @@ Please be aware of the fact that these lessons and files are up to date as of 06
 
 Happy programming!
 
-- LostBrickPlacer
+-LostBrickPlacer
