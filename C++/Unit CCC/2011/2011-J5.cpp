@@ -3,8 +3,10 @@
 int main() {
     int numFriends;
     int numFriendships;
+    cout << "Enter number of friends: ";
     cin >> numFriends;
     int friendNetwork[6] = {1, 1, 1, 1, 1, 1};
+
     for (int i = 0; i < numFriends; i++) {
         friendNetwork[i] = 1;
     }
@@ -15,5 +17,6 @@ int main() {
     }
 
     cout << friendNetwork[numFriends - 1] << endl;
+    
     return 0;
 }

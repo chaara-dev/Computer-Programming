@@ -2,7 +2,8 @@
 
 int main() {
     int firstTerm, secondTerm, sequenceLength;
-    cin >> firstTerm >> secondTerm;
+    cout << "Enter the first number: "; cin >> firstTerm;
+    cout << "Enter the second number: "; cin >> secondTerm;
     sequenceLength = 2;
 
     while (true){

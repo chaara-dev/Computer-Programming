@@ -59,6 +59,8 @@ string travel(string direction, string position, int magnitude, vector<string>& 
 }
 
 int main() {
+    cout << "Enter direction and distances: ";
+
     vector<string> traversed;
     string start = "0 -1";
     traversed.push_back(start);
