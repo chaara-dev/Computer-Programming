@@ -19,7 +19,9 @@ The entirety of the Java unit is empty, and I am currently working on it, so ple
 Remember that these folders may contain information related to me (LostBrickPlacer), and I ask you to please respect my privacy.
 Change the information if you're going to use the files too, honestly that's just common sense.
 
-Please be aware of the fact that these lessons and files are up to date as of 06-21-2023, and may not remain always the right solution to the projects/assignments.
+Please be aware of the fact that these lessons and files are up to date as of 06-21-2023, and may not remain always the right solution to the projects/assignments. 
+**By using my files, you agree that if you are caught "cheating" or get in any sort of trouble at all, I had nothing to do with any of this.
+This is a repository for my own use, but you are welcome to use it as well. Don't make me take it down.**
 
 Happy programming!
 
