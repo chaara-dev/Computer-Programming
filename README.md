@@ -21,7 +21,7 @@ Remember that these folders may contain information related to me (LostBrickPlac
 Change the information if you're going to use the files too, honestly that's just common sense.
 
 
-Please be aware of the fact that these lessons and files are up to date as of 06-23-2023, and may not remain always the right solution to the projects/assignments. 
+Please be aware of the fact that these lessons and files are up to date as of June 23, 2023, and may not remain always the right solution to the projects/assignments. 
 **By using this repository, you agree that if you are caught "cheating" or get in any sort of trouble at all, I had nothing to do with any of this.
 This is mainly for my own use, but you are welcome to use it as well. Don't make me take it down.**
 
