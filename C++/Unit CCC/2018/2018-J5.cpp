@@ -1,8 +1,5 @@
-#include <iostream>
-#include <vector>
-#include <queue>
+#include "..\..\common.h"
 
-using namespace std;
 
 void dfs(vector<vector<int>>& graph, int node, vector<bool>& seen) {
     for (int nbr : graph[node]) {
