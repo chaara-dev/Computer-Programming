@@ -1,8 +1,6 @@
 #include "..\..\common.h"
 
-
 int N;
-
 bool check(vector<vector<int>>& grid) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
