@@ -41,10 +41,12 @@ void calculatePossibleScore(vector<string>& gamesToPlay, vector<int>& teams, int
 
 int main() {
     int T;
+    cout << "Enter team: ";
     cin >> T;
     T--;
 
     int G;
+    cout << "Enter num of games played: ";
     cin >> G;
 
     vector<int> team(4);
@@ -52,6 +54,7 @@ int main() {
 
     for (int i = 0; i < G; i++) {
         int team1, team2, score1, score2;
+        cout << "Enter team scores: ";
         cin >> team1 >> team2 >> score1 >> score2;
 
         if (team1 < team2) {
