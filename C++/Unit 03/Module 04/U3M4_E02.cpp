@@ -6,9 +6,9 @@ int main() {
     float banana_price = 1.72;
     float orange_input, apple_input, banana_input;
 
-    cout << "Welcome to New Westminster's Fruit Store Cost Calculator!";
+    cout << "Welcome to New Westminster's Fruit Store Cost Calculator! ";
 
-    cout << " FRUITS PRICE LIST: \nOranges: " << orange_price << "\nApples: " << apple_price << endl;
+    cout << "FRUITS PRICE LIST: \nOranges: " << orange_price << "\nApples: " << apple_price << endl;
     cout << "Bananas: " << banana_price << endl << endl;
 
     cout << "How many kilograms of fruit do you want?" << endl;
